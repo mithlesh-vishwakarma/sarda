@@ -1019,12 +1019,17 @@ section,
 
 .services .card .card-img {
   overflow: hidden;
-    margin-bottom: 15px;
+    margin: 15px 0;
     border-radius: 0;
-    width: 80px;
-    margin: 15px 53px;
+}
 
+.img-fluid.services {
+  width: 80px;
+}
 
+.card-img.services {
+  display: flex;
+  justify-content: center;
 }
 
 .services .card .card-img img {
@@ -2045,4 +2050,8 @@ section,
   100% {
     transform: rotate(360deg);
   }
+}
+
+.col-lg-6.order-2.order-lg-1.d-flex.flex-column.justify-content-around {
+  align-items: center;
 }
