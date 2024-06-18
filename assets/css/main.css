@@ -1023,6 +1023,13 @@ section,
     border-radius: 0;
 }
 
+img.img-fluid.features {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+
 .img-fluid.services {
   width: 80px;
 }
