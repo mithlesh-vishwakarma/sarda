@@ -1336,6 +1336,26 @@ img.img-fluid.features {
   z-index: 1;
 }
 
+/* .testimonials .testimonial-item .testimonial-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 50px solid color-mix(in srgb, var(--default-color), transparent 68%);
+  margin: 0 auto;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+} */
+
+
+/* .testimonials .testimonial-item .testimonial-img {
+  width: 120px;
+  border-radius: 50%;
+  border: 0px solid color-mix(in srgb, var(--default-color), transparent 68%);
+  margin: 0 auto;
+} */
+
+
+
 .testimonials .container {
   position: relative;
   z-index: 3;
@@ -1351,10 +1371,13 @@ img.img-fluid.features {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 100px;
+  width: 120px;
   border-radius: 50%;
-  border: 6px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 0px solid color-mix(in srgb, var(--default-color), transparent 85%);
   margin: 0 auto;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .testimonials .testimonial-item h3 {
@@ -2088,4 +2111,29 @@ img.img-fluid.features {
 
 .row.gy-4 {
   justify-content: space-around;
+}
+
+/* -------------------------------------------------------------------
+galary about us part css
+------------------------------------------------------------------- */
+
+.thumbnail {
+  margin-bottom: 6px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.blur {
+  transform: scale(0.9);
+  opacity: 0.6;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.about {
+  margin-top: 70px;
 }
