@@ -2118,7 +2118,7 @@ galary about us part css
 ------------------------------------------------------------------- */
 
 .thumbnail {
-  margin-bottom: 6px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
 }
