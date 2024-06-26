@@ -216,6 +216,29 @@ h6 {
   }
 
 
+
+  ul.pretretment {
+    left: -321px !important;
+  }
+
+  ul.dyeing {
+    left: -450px !important;
+  }
+
+  ul.printing {
+    left: -580px !important;
+  }
+
+  ul.finishing-agents {
+    left: -300px !important;
+  }
+
+  ul.basic-chemicals {
+    left: -210px !important;
+  }
+
+
+
   .navmenu .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
