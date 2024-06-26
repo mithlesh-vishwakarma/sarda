@@ -1,2 +1,1 @@
-The .scss (Sass) files are only available in the pro version.
-You can buy it from: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
+this is only readme file. this project is made using bootstrapmade 
