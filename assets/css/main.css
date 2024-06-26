@@ -199,8 +199,8 @@ h6 {
   }
 
   .navmenu .dropdown ul {
-    margin: 0;
-    padding: 10px 0;
+    margin: 0px;
+    padding: 10px 0px;
     background: var(--nav-dropdown-background-color);
     display: block;
     position: absolute;
@@ -212,11 +212,9 @@ h6 {
     border-radius: 4px;
     z-index: 99;
     box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+
   }
 
-  .navmenu .dropdown ul li {
-    min-width: 200px;
-  }
 
   .navmenu .dropdown ul a {
     padding: 10px 20px;
@@ -2105,7 +2103,7 @@ img.img-fluid.features {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  /* gap: 30px; */
   text-align: center;
 }
 
@@ -2116,12 +2114,12 @@ img.img-fluid.features {
 /* -------------------------------------------------------------------
 galary about us part css
 ------------------------------------------------------------------- */
-
+/* 
 .thumbnail {
   margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 
 .blur {
@@ -2134,6 +2132,17 @@ galary about us part css
   filter: blur(2px);
 }
 
-.about {
-  margin-top: 70px;
+/* .about {
+  margin: 70px;
+} */
+
+
+p.cmp-name {
+  color: black;
+  font-feature-settings: normal;
 }
+
+/* .dyeing {
+  min-width: 500px;
+  max-width: 500px;
+} */
