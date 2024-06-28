@@ -128,4 +128,19 @@
     });
   });
 
+
+
+  // mail functions
+
+  document.getElementById('mailto-link').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    var email = 'shubhamsarda@sardachemicalcorporation.com';
+    var subject = 'Hello!';
+    var body = 'I wanted to reach out and say hello.';
+
+    var mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoLink;
+  });
 })();
