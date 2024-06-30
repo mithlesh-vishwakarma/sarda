@@ -425,6 +425,7 @@ h6 {
   margin-bottom: 25px;
 }
 
+
 .footer .footer-about .logo img {
   max-height: 40px;
   margin-right: 6px;
@@ -1744,7 +1745,6 @@ img.img-fluid.features {
 
 
 
-
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
@@ -1957,7 +1957,7 @@ img.img-fluid.features {
   height: 100%;
 }
 
-.contact .php-email-form .error-message {
+/* .contact .php-email-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -1965,7 +1965,7 @@ img.img-fluid.features {
   padding: 15px;
   margin-bottom: 24px;
   font-weight: 600;
-}
+} */
 
 .contact .php-email-form .sent-message {
   display: none;
