@@ -13,6 +13,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Contact = React.lazy(() => import('./pages/Contact'));
+const Products = React.lazy(() => import('./pages/Products.tsx'));
 
 // Preloader component fallback for Suspense
 const PreloaderFallback: React.FC = () => (
@@ -52,6 +53,9 @@ export const App: React.FC = () => {
       case '/partners':
         bodyClass = 'about-page';
         break;
+      case '/products':
+        bodyClass = 'about-page';
+        break;
       case '/contact':
         bodyClass = 'contact-page';
         break;
@@ -77,6 +81,7 @@ export const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/partners" element={<Partners />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<Home />} /> {/* Fallback route */}
           </Routes>

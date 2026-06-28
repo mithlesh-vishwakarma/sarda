@@ -5,7 +5,7 @@ import sardaLogo from '../assets/img/sarda-logopng.png';
 export const Header: React.FC = () => {
   const location = useLocation();
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
-  const [activeDropdowns, setActiveDropdowns] = useState<string[]>([]);
+  // const [activeDropdowns, setActiveDropdowns] = useState<string[]>([]);
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Apply .scrolled class to header on scroll
@@ -39,28 +39,28 @@ export const Header: React.FC = () => {
   // Close mobile nav when location (page) changes
   useEffect(() => {
     setIsMobileNavActive(false);
-    setActiveDropdowns([]);
+    // setActiveDropdowns([]);
   }, [location.pathname]);
 
   const toggleMobileNav = () => {
     setIsMobileNavActive(!isMobileNavActive);
   };
 
-  const toggleDropdown = (key: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setActiveDropdowns(prev =>
-      prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
-    );
-  };
+  // const toggleDropdown = (key: string, e: React.MouseEvent) => {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  //   setActiveDropdowns(prev =>
+  //     prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
+  //   );
+  // };
 
   const isActive = (path: string) => {
     return location.pathname === path ? 'active' : '';
   };
 
   return (
-    <header 
-      id="header" 
+    <header
+      id="header"
       className={`header d-flex align-items-center fixed-top ${isScrolled ? 'scrolled' : ''}`}
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
@@ -86,9 +86,14 @@ export const Header: React.FC = () => {
                 Trusted Partners
               </Link>
             </li>
-            <li className={`dropdown ${activeDropdowns.includes('products') ? 'active' : ''}`}>
+            <li>
+              <Link to="/products" className={isActive('/products')}>
+                Our Products
+              </Link>
+            </li>
+            {/* <li className={`dropdown ${activeDropdowns.includes('products') ? 'active' : ''}`}>
               <a href="#" onClick={(e) => toggleDropdown('products', e)}>
-                <span>Our Products</span>{' '}
+                <span>Products</span>{' '}
                 <i className="bi bi-chevron-down toggle-dropdown"></i>
               </a>
               <ul className={activeDropdowns.includes('products') ? 'dropdown-active' : ''}>
@@ -228,14 +233,14 @@ export const Header: React.FC = () => {
                   </ul>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact" className={isActive('/contact')}>
                 Contact Us
               </Link>
             </li>
           </ul>
-          <i 
+          <i
             className={`mobile-nav-toggle d-xl-none bi ${isMobileNavActive ? 'bi-x' : 'bi-list'}`}
             onClick={toggleMobileNav}
           ></i>
