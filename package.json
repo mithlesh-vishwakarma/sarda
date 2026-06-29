@@ -6,7 +6,7 @@
 
 
   
-  "homepage": "https://your-username.github.io/sarda",
+  "homepage": "https://github.com/mithlesh-vishwakarma/sarda",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
