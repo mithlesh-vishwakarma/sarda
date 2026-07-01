@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Import Assets
 import worldDottedMap from '../assets/img/world-dotted-map.png';
-import heroLogoSarda from '../assets/img/hero-logp-sarda.png';
+import heroLogoSarda from '../assets/img/sarda-logo.png';
 import industryAssociationSvg from '../assets/img/industry-association-svgrepo-com.svg';
 import qualitySupervisionSvg from '../assets/img/quality-supervision-svgrepo-com.svg';
 import comprehensiveSvg from '../assets/img/comprihensiv.svg';
@@ -58,7 +58,23 @@ export const Home: React.FC = () => {
             {/* Logo image floating with dynamic hover/scroll animation */}
             <div className="col-lg-5 order-2 order-lg-2 d-none d-lg-flex justify-content-center align-items-center" data-aos="zoom-out" data-aos-delay="200">
               <div className="hero-logo-container">
-                <img src={heroLogoSarda} className="img-fluid" alt="Sarda Logo" style={{ maxHeight: '380px', objectFit: 'contain' }} />
+                <div className="atom-loader hero-atom-loader">
+                  <div className="nucleus" style={{ background: 'none', boxShadow: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img
+                      src={heroLogoSarda}
+                      alt="Sarda Nucleus"
+                      style={{
+                        width: '12px',
+                        height: '12px',
+                        objectFit: 'contain',
+                        filter: 'drop-shadow(0 0 10px rgba(13, 66, 255, 0.7))'
+                      }}
+                    />
+                  </div>
+                  <div className="orbit orbit-1"></div>
+                  <div className="orbit orbit-2"></div>
+                  <div className="orbit orbit-3"></div>
+                </div>
               </div>
             </div>
           </div>

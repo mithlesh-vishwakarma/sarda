@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import sardaLogo from '../assets/img/sarda-logopng.png';
+import sardaLogo from '../assets/img/sarda-logo.png';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -20,8 +20,18 @@ export const Footer: React.FC = () => {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <Link to="/" className="logo d-flex align-items-center">
-              <img src={sardaLogo} alt="Sarda Logo" style={{ maxHeight: '35px', marginRight: '10px' }} />
-              <span className="sitename" style={{ fontSize: '24px', fontWeight: 700, color: '#ffffff' }}>Sarda Chemical Corporation</span>
+              <img 
+                src={sardaLogo} 
+                alt="Sarda Logo" 
+                style={{ 
+                  maxHeight: '70px', 
+                  backgroundColor: '#ffffff', 
+                  padding: '8px 20px', 
+                  display: 'inline-block',
+                  objectFit: 'contain',
+                  borderRadius: '6px'
+                }} 
+              />
             </Link>
             <p>
               Sarda Chemical Corporation, a leader in textile chemicals for 27 years, delivers high-performance
