@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import sardaLogo from '../assets/img/sarda-logo.png';
+import { useBrand } from '../context/BrandContext';
 
 export const Header: React.FC = () => {
+  const { logo, companyName } = useBrand();
   const location = useLocation();
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
   // const [activeDropdowns, setActiveDropdowns] = useState<string[]>([]);
@@ -65,7 +66,7 @@ export const Header: React.FC = () => {
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <Link to="/" className="logo d-flex align-items-center me-auto">
-          <img src={sardaLogo} alt="logo" style={{ maxHeight: '56px' }} />
+          <img src={logo} alt={companyName} style={{ maxHeight: '56px' }} />
         </Link>
 
         <nav id="navmenu" className="navmenu">

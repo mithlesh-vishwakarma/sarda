@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useBrand } from '../context/BrandContext';
 
 // Import Assets
 import worldDottedMap from '../assets/img/world-dotted-map.png';
-import heroLogoSarda from '../assets/img/sarda-logo.png';
 import industryAssociationSvg from '../assets/img/industry-association-svgrepo-com.svg';
 import qualitySupervisionSvg from '../assets/img/quality-supervision-svgrepo-com.svg';
 import comprehensiveSvg from '../assets/img/comprihensiv.svg';
@@ -15,6 +15,8 @@ import deliveryScheduleSvg from '../assets/img/delivery-schedule-svgrepo-com.svg
 import ctaBg from '../assets/img/cta-bg.jpg';
 
 export const Home: React.FC = () => {
+  const { logo, companyName } = useBrand();
+
   return (
     <>
       {/* Hero Section */}
@@ -34,10 +36,10 @@ export const Home: React.FC = () => {
                   Welcome to
                 </h4>
                 <h1 className="text-white mb-4" style={{ fontSize: '38px', fontWeight: 800, lineHeight: 1.25 }}>
-                  Sarda Chemical Corporation
+                  {companyName}
                 </h1>
                 <p className="mb-4" style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '15.5px', lineHeight: 1.6 }}>
-                  With over 27 years of excellence in the textile chemicals industry, Sarda Chemical Corporation stands as
+                  With over 27 years of excellence in the textile chemicals industry, {companyName} stands as
                   a trusted leader in chemical trading and distribution. Our unwavering commitment to quality and
                   innovation has made us a preferred partner for numerous esteemed clients.
                   As a premier supplier, we offer a comprehensive range of high-performance textile chemicals that cater to
@@ -59,15 +61,23 @@ export const Home: React.FC = () => {
             <div className="col-lg-5 order-2 order-lg-2 d-none d-lg-flex justify-content-center align-items-center" data-aos="zoom-out" data-aos-delay="200">
               <div className="hero-logo-container">
                 <div className="atom-loader hero-atom-loader">
-                  <div className="nucleus" style={{ background: 'none', boxShadow: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div className="nucleus" style={{
+                    background: '#ffffff',
+                    boxShadow: '0 0 12px rgba(0, 0, 0, 0.15)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '1px',
+                    width: '14px',
+                    height: '14px'
+                  }}>
                     <img
-                      src={heroLogoSarda}
-                      alt="Sarda Nucleus"
+                      src={logo}
+                      alt={`${companyName} Nucleus`}
                       style={{
-                        width: '12px',
-                        height: '12px',
-                        objectFit: 'contain',
-                        filter: 'drop-shadow(0 0 10px rgba(13, 66, 255, 0.7))'
+                        width: '92%',
+                        height: '92%',
+                        objectFit: 'contain'
                       }}
                     />
                   </div>
@@ -85,16 +95,16 @@ export const Home: React.FC = () => {
       <section id="services" className="services section" style={{ padding: '90px 0' }}>
         {/* Section Title */}
         <div className="container-fluid container-xl text-center mb-5" data-aos="fade-up">
-          <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-            <span style={{ width: '6px', height: '6px', backgroundColor: '#0d42ff', borderRadius: '50%', display: 'inline-block' }}></span>
+          <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.08)', color: 'var(--primary)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
+            <span style={{ width: '6px', height: '6px', backgroundColor: 'var(--primary)', borderRadius: '50%', display: 'inline-block' }}></span>
             Why Choose Us
           </div>
           <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', marginBottom: '15px' }}>
-            Why Sarda Chemical Corporation?
+            Why {companyName}?
           </h2>
-          <div className="mx-auto" style={{ width: '50px', height: '4px', background: '#0d42ff', borderRadius: '2px', marginBottom: '20px' }}></div>
+          <div className="mx-auto" style={{ width: '50px', height: '4px', background: 'var(--primary)', borderRadius: '2px', marginBottom: '20px' }}></div>
           <p style={{ maxWidth: '650px', margin: '0 auto', color: '#555e6b', fontSize: '16px', lineHeight: 1.6 }}>
-            Choose Sarda Chemical Corporation as your trusted partner in textile chemicals and experience the difference
+            Choose {companyName} as your trusted partner in textile chemicals and experience the difference
             that expertise, quality, and exceptional service can make for your business.
           </p>
         </div>
@@ -108,7 +118,7 @@ export const Home: React.FC = () => {
                 </div>
                 <h3>Industry Expertise</h3>
                 <p>
-                  With over 27 years of experience, Sarda Chemical Corporation brings a deep understanding of the
+                  With over 27 years of experience, {companyName} brings a deep understanding of the
                   textile chemicals industry. Our extensive knowledge ensures that we provide the most effective
                   solutions tailored to your specific needs.
                 </p>
@@ -164,7 +174,7 @@ export const Home: React.FC = () => {
                 </div>
                 <h3>Exceptional Customer Service</h3>
                 <p>
-                  At Sarda Chemical Corporation, customer satisfaction is our top priority. Our dedicated team of
+                  At {companyName}, customer satisfaction is our top priority. Our dedicated team of
                   professionals is always ready to assist you with expert advice, prompt support, and tailored solutions
                   to meet your unique requirements.
                 </p>
@@ -231,7 +241,7 @@ export const Home: React.FC = () => {
                     Ready to Partner with Industry Leaders?
                   </h2>
                   <p className="text-white-50 mb-4" style={{ fontSize: '16px', lineHeight: 1.6, opacity: 0.85 }}>
-                    Unlock exceptional product standards, wholesale pricing, and reliable logistics by partnering with Sarda Chemical Corporation. Let's grow your business together.
+                    Unlock exceptional product standards, wholesale pricing, and reliable logistics by partnering with {companyName}. Let's grow your business together.
                   </p>
                   <div className="row text-white gy-3">
                     <div className="col-sm-6 d-flex align-items-center gap-2">

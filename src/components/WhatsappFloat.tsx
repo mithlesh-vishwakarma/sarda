@@ -1,9 +1,12 @@
 import React from 'react';
+import { useBrand } from '../context/BrandContext';
 
 export const WhatsappFloat: React.FC = () => {
+  const { socialLinks } = useBrand();
+
   return (
     <div className="whatsapp-float">
-      <a href="https://wa.me/9825109158" target="_blank" rel="noopener noreferrer">
+      <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
           alt="WhatsApp" 

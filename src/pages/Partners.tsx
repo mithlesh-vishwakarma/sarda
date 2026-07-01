@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useBrand } from '../context/BrandContext';
 
 // Import Assets
 import pageTitleBg from '../assets/img/page-title-bg.jpg';
@@ -7,6 +8,7 @@ import ranChemicalsImg from '../assets/img/ran-chemicals-updated new.jpg';
 import everestStarchImg from '../assets/img/everest-starch-updated new.jpg';
 
 export const Partners: React.FC = () => {
+  const { companyName } = useBrand();
   return (
     <>
       {/* Page Title */}
@@ -29,7 +31,7 @@ export const Partners: React.FC = () => {
             Our Trusted Partners
           </h1>
           <p className="text-slate-300 max-w-3xl mx-auto mt-3" data-aos="fade-up" data-aos-delay="300" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
-            Sarda Chemical Corporation collaborates with industry-leading manufacturers to supply high-performance chemical formulations and reliable raw materials to the textile sector.
+            {companyName} collaborates with industry-leading manufacturers to supply high-performance chemical formulations and reliable raw materials to the textile sector.
           </p>
           <nav className="breadcrumbs d-flex justify-content-center mt-4" data-aos="fade-up" data-aos-delay="400">
             <ol className="d-flex list-unstyled gap-2 m-0 p-0 text-slate-300" style={{ fontSize: '14.5px' }}>
@@ -46,7 +48,7 @@ export const Partners: React.FC = () => {
         <div className="container-fluid container-xl">
           <div className="row align-items-center gy-4">
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
+              <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.08)', color: 'var(--primary)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
                 <span className="partner-glow-dot"></span>
                 Synergy & Quality
               </div>
@@ -56,7 +58,7 @@ export const Partners: React.FC = () => {
             </div>
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <p style={{ color: '#555e6b', fontSize: '15.5px', lineHeight: '1.8' }}>
-                Our alliances are built on a shared commitment to scientific excellence and operational integrity. As authorized distributors and agents, Sarda Chemical Corporation seamlessly bridges the gap between pioneering chemical research and the practical demands of modern textile manufacturing—ensuring certified quality standards, optimized cost structures, and a highly resilient supply chain.
+                Our alliances are built on a shared commitment to scientific excellence and operational integrity. As authorized distributors and agents, {companyName} seamlessly bridges the gap between pioneering chemical research and the practical demands of modern textile manufacturing—ensuring certified quality standards, optimized cost structures, and a highly resilient supply chain.
               </p>
               <p style={{ color: '#555e6b', fontSize: '15.5px', lineHeight: '1.8', margin: 0 }}>
                 By integrating decades of technical expertise with progressive eco-conscious values, we collaborate closely with our partners to address sizing, finishing, and coloration challenges, empowering regional textile houses to optimize yield while upholding international environmental standards.
@@ -75,10 +77,10 @@ export const Partners: React.FC = () => {
             <div className="row align-items-center gy-5">
               {/* Text Column */}
               <div className="col-lg-7 order-last order-lg-first">
-                <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.06)', color: '#0d42ff', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.06)', color: 'var(--primary)', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>
                   Authorized Dealer
                 </div>
-                <h3 style={{ fontSize: '28px', fontWeight: 800, color: '#001973', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--secondary)', marginBottom: '8px' }}>
                   RAN CHEMICALS PVT. LTD & RSA INDUSTRIES PVT. LTD
                 </h3>
                 <h6 style={{ fontSize: '14px', fontWeight: 600, color: '#555e6b', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '24px' }}>
@@ -86,22 +88,22 @@ export const Partners: React.FC = () => {
                 </h6>
 
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  Sarda Chemical Corporation is proud to be an authorized dealer for both Ran Chemicals and RSA
+                  {companyName} is proud to be an authorized dealer for both Ran Chemicals and RSA
                   Industries, two highly esteemed names in the chemical sector based in Nagpur, India with
                   more than three decades of experience in developing and manufacturing next-generation
                   speciality formulations for applications across textile.
                 </p>
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  This dual partnership underscores Sarda Chemical Corporation's dedication to providing a
+                  This dual partnership underscores {companyName}'s dedication to providing a
                   diverse and high-quality range of chemical products to meet the varied needs of its clients.
                   By offering the innovative solutions of Ran Chemicals alongside the advanced products from
-                  RSA Industries, Sarda Chemical Corporation ensures that customers receive unparalleled
-                  service and exceptional value. This collaboration highlights Sarda Chemical Corporation's
+                  RSA Industries, {companyName} ensures that customers receive unparalleled
+                  service and exceptional value. This collaboration highlights {companyName}'s
                   commitment to excellence, reliability, and customer satisfaction, solidifying its position
                   as a trusted leader in the market.
                 </p>
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7', marginBottom: '25px' }}>
-                  Through these strategic alliances, Sarda Chemical Corporation continues to drive industry
+                  Through these strategic alliances, {companyName} continues to drive industry
                   advancements and deliver superior solutions to its clients.
                 </p>
 
@@ -182,10 +184,10 @@ export const Partners: React.FC = () => {
 
               {/* Text Column */}
               <div className="col-lg-7">
-                <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.06)', color: '#0d42ff', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>
+                <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.06)', color: 'var(--primary)', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>
                   Authorized Agent
                 </div>
-                <h3 style={{ fontSize: '28px', fontWeight: 800, color: '#001973', marginBottom: '8px' }}>
+                <h3 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--secondary)', marginBottom: '8px' }}>
                   EVEREST STARCH INDIA PVT. LTD
                 </h3>
                 <h6 style={{ fontSize: '14px', fontWeight: 600, color: '#555e6b', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '24px' }}>
@@ -193,22 +195,21 @@ export const Partners: React.FC = () => {
                 </h6>
 
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  Sarda Chemical Corporation is proud to be the authorized agent of Everest Starch India for
+                  {companyName} is proud to be the authorized agent of Everest Starch India for
                   their premium product, maize starch. At present, Everest Starch is processing 600 metric
                   tons of corn (maize) per day. The company's locational advantages allow it to maintain
-                  proper procurement, processing, and supply arrangements. This partnership reflects Sarda
-                  Chemical Corporation's commitment to delivering top-tier products and solutions to its
+                  proper procurement, processing, and supply arrangements. This partnership reflects {companyName}'s commitment to delivering top-tier products and solutions to its
                   customers.
                 </p>
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  As the authorized agent, Sarda Chemical Corporation ensures the availability of high-quality
+                  As the authorized agent, {companyName} ensures the availability of high-quality
                   maize starch from Everest Starch India, known for its superior performance and reliability.
-                  This collaboration enhances Sarda Chemical Corporation's product portfolio, enabling them to
+                  This collaboration enhances {companyName}'s product portfolio, enabling them to
                   meet the diverse needs of various industries, including food processing, textiles,
                   pharmaceuticals, and more.
                 </p>
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7', marginBottom: '25px' }}>
-                  Through this strategic alliance, Sarda Chemical Corporation continues to uphold its
+                  Through this strategic alliance, {companyName} continues to uphold its
                   dedication to excellence, quality, and customer satisfaction, reinforcing its reputation as
                   a trusted leader in the market. This partnership not only strengthens their market position
                   but also ensures that their customers have access to some of the best maize starch products
@@ -271,10 +272,10 @@ export const Partners: React.FC = () => {
       </section>
 
       {/* Core Partnership Values / Stats Section */}
-      <section className="services section" style={{ padding: '80px 0', borderTop: '1px solid rgba(13, 66, 255, 0.08)' }}>
+      <section className="services section" style={{ padding: '80px 0', borderTop: '1px solid rgba(var(--primary-rgb), 0.08)' }}>
         <div className="container-fluid container-xl">
           <div className="text-center mb-5" data-aos="fade-up">
-            <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
+            <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.08)', color: 'var(--primary)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
               <span className="partner-glow-dot"></span>
               Core Value Deliverables
             </div>
@@ -287,11 +288,11 @@ export const Partners: React.FC = () => {
           <div className="row g-4">
             {/* Card 1 */}
             <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="premium-service-card" style={{ borderTop: '4px solid #0d42ff' }}>
-                <div className="service-icon-wrapper" style={{ background: 'rgba(13, 66, 255, 0.06)', color: '#0d42ff' }}>
+              <div className="premium-service-card" style={{ borderTop: '4px solid var(--primary)' }}>
+                <div className="service-icon-wrapper" style={{ background: 'rgba(var(--primary-rgb), 0.06)', color: 'var(--primary)' }}>
                   <i className="bi bi-award-fill" style={{ fontSize: '32px' }}></i>
                 </div>
-                <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#001973', textAlign: 'center', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '19px', fontWeight: 700, color: 'var(--secondary)', textAlign: 'center', marginBottom: '12px' }}>
                   Authorized Status
                 </h3>
                 <p style={{ fontSize: '14.2px', color: '#555e6b', lineHeight: '1.6', textAlign: 'center', margin: 0 }}>
@@ -306,7 +307,7 @@ export const Partners: React.FC = () => {
                 <div className="service-icon-wrapper" style={{ background: 'rgba(46, 196, 182, 0.06)', color: '#2ec4b6' }}>
                   <i className="bi bi-funnel-fill" style={{ fontSize: '32px' }}></i>
                 </div>
-                <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#001973', textAlign: 'center', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '19px', fontWeight: 700, color: 'var(--secondary)', textAlign: 'center', marginBottom: '12px' }}>
                   R&D Centered
                 </h3>
                 <p style={{ fontSize: '14.2px', color: '#555e6b', lineHeight: '1.6', textAlign: 'center', margin: 0 }}>
@@ -321,7 +322,7 @@ export const Partners: React.FC = () => {
                 <div className="service-icon-wrapper" style={{ background: 'rgba(48, 177, 255, 0.06)', color: '#30b1ff' }}>
                   <i className="bi bi-truck-flatbed" style={{ fontSize: '32px' }}></i>
                 </div>
-                <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#001973', textAlign: 'center', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '19px', fontWeight: 700, color: 'var(--secondary)', textAlign: 'center', marginBottom: '12px' }}>
                   Supply Reliability
                 </h3>
                 <p style={{ fontSize: '14.2px', color: '#555e6b', lineHeight: '1.6', textAlign: 'center', margin: 0 }}>
@@ -332,11 +333,11 @@ export const Partners: React.FC = () => {
 
             {/* Card 4 */}
             <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div className="premium-service-card" style={{ borderTop: '4px solid #001973' }}>
-                <div className="service-icon-wrapper" style={{ background: 'rgba(0, 25, 115, 0.06)', color: '#001973' }}>
+              <div className="premium-service-card" style={{ borderTop: '4px solid var(--secondary)' }}>
+                <div className="service-icon-wrapper" style={{ background: 'rgba(var(--secondary-rgb), 0.06)', color: 'var(--secondary)' }}>
                   <i className="bi bi-shield-fill-check" style={{ fontSize: '32px' }}></i>
                 </div>
-                <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#001973', textAlign: 'center', marginBottom: '12px' }}>
+                <h3 style={{ fontSize: '19px', fontWeight: 700, color: 'var(--secondary)', textAlign: 'center', marginBottom: '12px' }}>
                   Eco Compliance
                 </h3>
                 <p style={{ fontSize: '14.2px', color: '#555e6b', lineHeight: '1.6', textAlign: 'center', margin: 0 }}>

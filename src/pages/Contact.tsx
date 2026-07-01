@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useBrand } from '../context/BrandContext';
 import pageTitleBg from '../assets/img/page-title-bg.jpg';
 
 export const Contact: React.FC = () => {
+  const { companyName, email, phone, googleMapsEmbedUrl, web3FormsAccessKey } = useBrand();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -30,7 +32,7 @@ export const Contact: React.FC = () => {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'ed67b5ad-afa4-4acb-9e5a-8d017f8265a9',
+          access_key: web3FormsAccessKey,
           ...formState,
         }),
       });
@@ -57,10 +59,10 @@ export const Contact: React.FC = () => {
   return (
     <>
       {/* Page Title */}
-      <div 
-        className="page-title position-relative d-flex align-items-center justify-content-center" 
-        data-aos="fade" 
-        style={{ 
+      <div
+        className="page-title position-relative d-flex align-items-center justify-content-center"
+        data-aos="fade"
+        style={{
           backgroundImage: `url(${pageTitleBg})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -84,7 +86,7 @@ export const Contact: React.FC = () => {
       {/* Contact Section */}
       <section id="contact" className="contact-section">
         <div className="container-fluid container-xl contact-container" data-aos="fade-up" data-aos-delay="100">
-          
+
           {/* Info Cards Row (Placed above the form in a 3-column layout) */}
           <div className="row gy-4 mb-5">
             {/* Surat Office Card */}
@@ -95,8 +97,8 @@ export const Contact: React.FC = () => {
                 </div>
                 <h3>Surat Headquarters</h3>
                 <div className="company-group">
-                  <p className="cmp-name">Sarda Chemical Corporation</p>
-                  <p className="cmp-name">Jupiter Organics Pvt Ltd</p>
+                  <p className="cmp-name">{companyName}</p>
+                  <p className="cmp-name">{companyName === 'Jupiter Organics' ? 'Sarda Chemical Corporation' : 'Jupiter Organics Pvt Ltd'}</p>
                 </div>
                 <p className="mt-2 text-slate-500">
                   326, Ishana Business Hub Althan Bamroli Expressway, VIP Road, nr. Dmart, Pandesara, Surat, Gujarat 394221
@@ -112,7 +114,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <h3>Mumbai Branch</h3>
                 <div className="company-group">
-                  <p className="cmp-name">Jupiter Chemicals</p>
+                  <p className="cmp-name">Jupiter Organics</p>
                 </div>
                 <p className="mt-2 text-slate-500">
                   313/319, Room No. 15, Harish Chamber, Samuel Street, Mumbai
@@ -129,7 +131,10 @@ export const Contact: React.FC = () => {
                 <h3>Direct Connect</h3>
                 <div className="d-flex flex-column gap-2">
                   <p className="text-slate-500">
-                    <strong className="text-slate-800">Phone:</strong> +91 9825109158
+                    <strong className="text-slate-800">Phone:</strong> {phone}
+                  </p>
+                  <p className="text-slate-500">
+                    <strong className="text-slate-800">Email:</strong> {email}
                   </p>
                   <p className="text-slate-500">
                     <strong className="text-slate-800">Availability:</strong> Mon - Sat, 9:30 AM - 6:30 PM
@@ -175,54 +180,54 @@ export const Contact: React.FC = () => {
 
                   <div className="col-md-6">
                     <div className="contact-input-group">
-                      <input 
-                        type="text" 
-                        name="name" 
+                      <input
+                        type="text"
+                        name="name"
                         value={formState.name}
                         onChange={handleChange}
-                        className="contact-form-control" 
+                        className="contact-form-control"
                         placeholder="Your Full Name"
-                        required 
+                        required
                       />
                     </div>
                   </div>
 
                   <div className="col-md-6">
                     <div className="contact-input-group">
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         name="email"
                         value={formState.email}
                         onChange={handleChange}
-                        className="contact-form-control" 
+                        className="contact-form-control"
                         placeholder="Your Email Address"
-                        required 
+                        required
                       />
                     </div>
                   </div>
 
                   <div className="col-12">
                     <div className="contact-input-group">
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         name="subject"
                         value={formState.subject}
                         onChange={handleChange}
-                        className="contact-form-control" 
+                        className="contact-form-control"
                         placeholder="Subject / Topic of Discussion"
-                        required 
+                        required
                       />
                     </div>
                   </div>
 
                   <div className="col-12">
                     <div className="contact-input-group">
-                      <textarea 
+                      <textarea
                         name="message"
                         value={formState.message}
                         onChange={handleChange}
-                        className="contact-form-control" 
-                        rows={6} 
+                        className="contact-form-control"
+                        rows={6}
                         placeholder="How can we help you? Write your message here..."
                         required
                       ></textarea>
@@ -230,8 +235,8 @@ export const Contact: React.FC = () => {
                   </div>
 
                   <div className="col-12">
-                    <button 
-                      type="submit" 
+                    <button
+                      type="submit"
                       className="contact-btn-submit"
                       disabled={status === 'loading'}
                     >
@@ -261,13 +266,13 @@ export const Contact: React.FC = () => {
                 <h3 className="text-slate-800 font-extrabold mt-1 text-2xl">Locate Our Surat Office</h3>
               </div>
               <div className="map-frame-wrapper">
-                <iframe 
+                <iframe
                   style={{ border: 0, width: '100%', height: '380px' }}
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14884.362063134127!2d72.8143071!3d21.1487958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051378b6c352b%3A0x25cbe5a269d7ff6b!2sSarda%20Chemical%20Corporation!5e0!3m2!1sen!2sin!4v1719056890605!5m2!1sen!2sin"
-                  allowFullScreen 
-                  loading="lazy" 
+                  src={googleMapsEmbedUrl}
+                  allowFullScreen
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Sarda Chemical Corporation Office Location Map"
+                  title={`${companyName} Office Location Map`}
                 ></iframe>
               </div>
             </div>

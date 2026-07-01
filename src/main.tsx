@@ -10,11 +10,14 @@ import './assets/vendor/swiper/swiper-bundle.min.css'
 import './assets/css/main.css'
 import './index.css'
 import App from './App.tsx'
+import { BrandProvider } from './context/BrandContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <BrandProvider>
+        <App />
+      </BrandProvider>
     </BrowserRouter>
   </StrictMode>,
 )

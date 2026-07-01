@@ -13,7 +13,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const Products = React.lazy(() => import('./pages/Products.tsx'));
+const Products = React.lazy(() => import('./pages/Products'));
 
 // Preloader component fallback for Suspense
 const PreloaderFallback: React.FC = () => (
