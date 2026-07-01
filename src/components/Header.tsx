@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import sardaLogo from '../assets/img/sarda-logopng.png';
+import sardaLogo from '../assets/img/sarda-logo.png';
 
 export const Header: React.FC = () => {
   const location = useLocation();
@@ -65,8 +65,7 @@ export const Header: React.FC = () => {
     >
       <div className="container-fluid container-xl position-relative d-flex align-items-center">
         <Link to="/" className="logo d-flex align-items-center me-auto">
-          <img src={sardaLogo} alt="logo" />
-          <h1 className="sitename">Sarda Chemical Corporation</h1>
+          <img src={sardaLogo} alt="logo" style={{ maxHeight: '56px' }} />
         </Link>
 
         <nav id="navmenu" className="navmenu">

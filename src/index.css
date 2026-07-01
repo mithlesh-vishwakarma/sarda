@@ -1843,6 +1843,57 @@ button:focus-visible {
   border-radius: 6px;
 }
 
+/* Floating logo container animation */
+@keyframes float-logo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-logo-container {
+  animation: float-logo 4.5s ease-in-out infinite !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Color customize for atom loader orbits to match Sarda logo theme colors */
+.atom-loader .orbit-1 {
+  border-color: rgba(78, 117, 54, 0.45) !important; /* logo green */
+}
+.atom-loader .orbit-1::before {
+  background-color: #4e7536 !important;
+  box-shadow: 0 0 10px #4e7536, 0 0 5px #4e7536 !important;
+}
+
+.atom-loader .orbit-2 {
+  border-color: rgba(232, 86, 53, 0.5) !important; /* logo orange */
+}
+.atom-loader .orbit-2::before {
+  background-color: #E85635 !important;
+  box-shadow: 0 0 10px #E85635, 0 0 5px #ff5722 !important;
+}
+
+.atom-loader .orbit-3 {
+  border-color: rgba(14, 73, 129, 0.45) !important; /* logo deep blue */
+}
+.atom-loader .orbit-3::before {
+  background-color: #0E4981 !important;
+  box-shadow: 0 0 10px #0E4981, 0 0 5px #0d42ff !important;
+}
+
+/* Scaling style for the loader on the hero page */
+.hero-atom-loader {
+  transform: scale(3.5) !important;
+  transform-origin: center !important;
+}
+
 
 
 
