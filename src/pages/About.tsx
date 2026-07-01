@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Swiper from 'swiper';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useBrand } from '../context/BrandContext';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -165,6 +166,8 @@ const FutureIllustration: React.FC = () => (
 );
 
 export const About: React.FC = () => {
+  const { companyName } = useBrand();
+
   useEffect(() => {
     const swiperInstance = new Swiper('.swiper', {
       modules: [Pagination, Autoplay],
@@ -222,7 +225,7 @@ export const About: React.FC = () => {
             Company Overview
           </h1>
           <p className="text-slate-300 max-w-3xl mx-auto mt-3" data-aos="fade-up" data-aos-delay="300" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
-            Founded in 1997 by Mr. Pannechand Sarda & Mr. Manish Kumar Sarda, Sarda Chemical Corporation has grown to
+            Founded in 1997 by Mr. Pannechand Sarda & Mr. Manish Kumar Sarda, {companyName} has grown to
             become a leading player in the chemical trading industry. With a steadfast commitment to quality and
             customer satisfaction, we have established a strong reputation for reliability and excellence. Our company
             specializes in sourcing, distributing, and marketing a wide range of chemicals, catering to the textile
@@ -252,7 +255,7 @@ export const About: React.FC = () => {
 
               <div className="founder-message-card mb-5">
                 <p className="fst-italic mb-4" style={{ fontSize: '16.5px', color: '#334155', lineHeight: 1.7 }}>
-                  "Sarda Chemical Corporation was built on the core belief that quality products and absolute transparency
+                  "{companyName} was built on the core belief that quality products and absolute transparency
                   form the foundation of enduring partnerships. Our journey is driven by a dedication to empower the
                   textile industry with sustainable and innovative chemical solutions."
                 </p>
@@ -265,8 +268,7 @@ export const About: React.FC = () => {
               </div>
 
               <p className="mb-5" style={{ color: '#555e6b', lineHeight: 1.7, fontSize: '15px' }}>
-                With their entrepreneurial spirit and visionary leadership, our founders laid the foundation of Sarda
-                Chemical Corporation in 1997. Over the past two decades, their deep industry intelligence and commitment
+                With their entrepreneurial spirit and visionary leadership, our founders laid the foundation of {companyName} in 1997. Over the past two decades, their deep industry intelligence and commitment
                 to client satisfaction have guided the enterprise's expansion, establishing it as a hallmark of reliability.
               </p>
 
@@ -318,7 +320,7 @@ export const About: React.FC = () => {
                 <img
                   src={mission1}
                   className="img-fluid position-relative shadow-2xl transition duration-500 hover:scale-[1.02]"
-                  alt="Sarda Chemical Corporation Core"
+                  alt={`${companyName} Core`}
                   style={{
                     borderRadius: '24px',
                     zIndex: 1,
@@ -497,7 +499,7 @@ export const About: React.FC = () => {
                 </div>
                 <h3>Our Journey</h3>
                 <p className="lead mb-4" style={{ fontSize: '16px', color: '#555e6b', lineHeight: '1.7' }}>
-                  From a small chemical trading house in 1997 to a signature of reliability, Sarda Chemical Corporation has built a legacy of trust, partnership, and absolute quality.
+                  From a small chemical trading house in 1997 to a signature of reliability, {companyName} has built a legacy of trust, partnership, and absolute quality.
                 </p>
 
                 {/* Milestone Timeline */}
@@ -731,7 +733,7 @@ export const About: React.FC = () => {
                   </div>
                   <h3>Responsibility</h3>
                   <p>
-                    We own our actions and their broader impact. We ensure Sarda Chemical Corporation operates as a positive, responsible force in our industry.
+                    We own our actions and their broader impact. We ensure {companyName} operates as a positive, responsible force in our industry.
                   </p>
                 </div>
               </div>

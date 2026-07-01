@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import sardaLogo from '../assets/img/sarda-logo.png';
+import { useBrand } from '../context/BrandContext';
 
 export const Footer: React.FC = () => {
+  const { logo, companyName, email, phone, address, socialLinks } = useBrand();
   const currentYear = new Date().getFullYear();
 
   const handleMailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const email = 'shubhamsarda@sardachemicalcorporation.com';
     const subject = 'Hello!';
     const body = 'I wanted to reach out and say hello.';
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -21,8 +21,8 @@ export const Footer: React.FC = () => {
           <div className="col-lg-5 col-md-12 footer-about">
             <Link to="/" className="logo d-flex align-items-center">
               <img 
-                src={sardaLogo} 
-                alt="Sarda Logo" 
+                src={logo} 
+                alt={`${companyName} Logo`} 
                 style={{ 
                   maxHeight: '70px', 
                   backgroundColor: '#ffffff', 
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p>
-              Sarda Chemical Corporation, a leader in textile chemicals for 27 years, delivers high-performance
+              {companyName}, a leader in textile chemicals for 27 years, delivers high-performance
               products through strategic partnerships, ensuring quality, efficiency, and innovation in
               industry solutions.
             </p>
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
               <a href="#" onClick={handleMailClick} id="mailto-link">
                 <i className="bi bi-envelope"></i>
               </a>
-              <a href="https://wa.me/9825109158" target="_blank" rel="noopener noreferrer">
+              <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-whatsapp"></i>
               </a>
             </div>
@@ -61,12 +61,12 @@ export const Footer: React.FC = () => {
 
           <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
-            <p>326, Ishana Business Hub Althan Bamroli Expessway,VIP Road, nr. Dmart, Pandesara, Surat, Gujarat 394221,India</p>
+            <p>{address}</p>
             <p className="mt-4">
-              <strong>Phone:</strong> <span>+91 9825109158</span>
+              <strong>Phone:</strong> <span>{phone}</span>
             </p>
             <p>
-              <strong>Email:</strong> <span>shubhamsarda@sardachemicalcorporation.com</span>
+              <strong>Email:</strong> <span>{email}</span>
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
       <div className="container-fluid container-xl copyright text-center mt-4">
         <p>
           © <span>Copyright 2024 - {currentYear}</span>{' '}
-          <strong className="px-1 sitename">Sarda Chemical Corporation</strong>{' '}
+          <strong className="px-1 sitename">{companyName}</strong>{' '}
           <span>All Rights Reserved</span>
         </p>
         {/* <div className="credits">
