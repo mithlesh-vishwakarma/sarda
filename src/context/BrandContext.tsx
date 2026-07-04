@@ -4,6 +4,7 @@ import { brands, defaultBrand } from '../config/brands';
 export interface BrandConfig {
   companyName: string;
   logo: string;
+  roundedLogo: string;
   favicon: string;
   primaryColor: string;
   primaryColorRgb: string;

@@ -1,11 +1,14 @@
 import sardaLogo from '../assets/img/sarda-logo.png';
 import sardaFavicon from '../assets/img/sarda-favicon.png'; // Updated to user's sarda-favicon.png
+import sardaRoundedLogo from '../assets/img/sarda-rounded-logo.jpeg';
 import jupiterLogo from '../assets/img/jupiter-logo.png';
 import jupiterFavicon from '../assets/img/jupiter-favicon.png'; // Updated to user's jupiter-favicon.png
+import jupiterRoundedLogo from '../assets/img/jupiter-rounded-logo.jpeg';
 
 const sardaConfig = {
   companyName: 'Sarda Chemical Corporation',
   logo: sardaLogo,
+  roundedLogo: sardaRoundedLogo,
   favicon: sardaFavicon,
   primaryColor: '#0d42ff',
   primaryColorRgb: '13, 66, 255',
@@ -47,6 +50,7 @@ const sardaConfig = {
 const jupiterConfig = {
   companyName: 'Jupiter Organics',
   logo: jupiterLogo,
+  roundedLogo: jupiterRoundedLogo,
   favicon: jupiterFavicon,
   primaryColor: '#d9851b',
   primaryColorRgb: '217, 133, 27',

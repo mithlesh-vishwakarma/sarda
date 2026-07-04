@@ -254,9 +254,6 @@ export const Products: React.FC = () => {
       >
         <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
         <div className="container-fluid container-xl position-relative text-center z-10">
-          <span className="hero-badge" data-aos="fade-up" data-aos-delay="100">
-            <span className="pulse-dot"></span>Interactive Directory
-          </span>
           <h1 className="text-white font-extrabold tracking-tight mt-2" data-aos="fade-up" data-aos-delay="200" style={{ fontSize: '3.2rem' }}>
             Products
           </h1>
@@ -278,10 +275,6 @@ export const Products: React.FC = () => {
         <div className="container-fluid container-xl">
 
           <div className="mb-5 text-center" data-aos="fade-up">
-            <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-              <span className="partner-glow-dot"></span>
-              Visual Hierarchy
-            </div>
             <h2 className="mb-4 text-slate-800 font-extrabold" style={{ fontSize: '32px' }}>
               Products Directory
             </h2>

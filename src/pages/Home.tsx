@@ -15,7 +15,7 @@ import deliveryScheduleSvg from '../assets/img/delivery-schedule-svgrepo-com.svg
 import ctaBg from '../assets/img/cta-bg.jpg';
 
 export const Home: React.FC = () => {
-  const { logo, companyName } = useBrand();
+  const { roundedLogo, companyName } = useBrand();
 
   return (
     <>
@@ -28,10 +28,6 @@ export const Home: React.FC = () => {
             {/* Text details inside a premium glassmorphic card */}
             <div className="col-lg-7 order-1 order-lg-1" data-aos="fade-up" data-aos-delay="100">
               <div className="hero-glass-card">
-                <div className="hero-badge">
-                  <span className="pulse-dot"></span>
-                  27+ Years of Excellence
-                </div>
                 <h4 className="text-uppercase tracking-wider mb-2" style={{ color: '#a3b8ff', fontSize: '14px', fontWeight: 600, letterSpacing: '2px' }}>
                   Welcome to
                 </h4>
@@ -45,6 +41,10 @@ export const Home: React.FC = () => {
                   As a premier supplier, we offer a comprehensive range of high-performance textile chemicals that cater to
                   diverse industry needs.
                 </p>
+                <div className="hero-badge">
+                  <span className="pulse-dot"></span>
+                  27+ Years of Excellence
+                </div>
                 <div className="d-flex flex-wrap gap-3">
                   <Link to="/contact" className="premium-btn-primary">
                     <span>Get in Touch</span>
@@ -60,31 +60,20 @@ export const Home: React.FC = () => {
             {/* Logo image floating with dynamic hover/scroll animation */}
             <div className="col-lg-5 order-2 order-lg-2 d-none d-lg-flex justify-content-center align-items-center" data-aos="zoom-out" data-aos-delay="200">
               <div className="hero-logo-container">
-                <div className="atom-loader hero-atom-loader">
-                  <div className="nucleus" style={{
-                    background: '#ffffff',
-                    boxShadow: '0 0 12px rgba(0, 0, 0, 0.15)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    padding: '1px',
-                    width: '14px',
-                    height: '14px'
-                  }}>
-                    <img
-                      src={logo}
-                      alt={`${companyName} Nucleus`}
-                      style={{
-                        width: '92%',
-                        height: '92%',
-                        objectFit: 'contain'
-                      }}
-                    />
-                  </div>
-                  <div className="orbit orbit-1"></div>
-                  <div className="orbit orbit-2"></div>
-                  <div className="orbit orbit-3"></div>
-                </div>
+                <img
+                  src={roundedLogo}
+                  alt={`${companyName} Logo`}
+                  style={{
+                    maxWidth: '320px',
+                    width: '100%',
+                    height: 'auto',
+                    borderRadius: '50%',
+                    boxShadow: '0 15px 35px rgba(0, 0, 0, 0.25)',
+                    border: '4px solid rgba(255, 255, 255, 0.1)',
+                    backdropFilter: 'blur(8px)',
+                    objectFit: 'contain'
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -95,10 +84,7 @@ export const Home: React.FC = () => {
       <section id="services" className="services section" style={{ padding: '90px 0' }}>
         {/* Section Title */}
         <div className="container-fluid container-xl text-center mb-5" data-aos="fade-up">
-          <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.08)', color: 'var(--primary)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-            <span style={{ width: '6px', height: '6px', backgroundColor: 'var(--primary)', borderRadius: '50%', display: 'inline-block' }}></span>
-            Why Choose Us
-          </div>
+
           <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', marginBottom: '15px' }}>
             Why {companyName}?
           </h2>
@@ -233,10 +219,7 @@ export const Home: React.FC = () => {
               <div className="row align-items-center gy-5">
                 {/* Left Column: Text & Features Checklist */}
                 <div className="col-lg-7 text-start">
-                  <div className="hero-badge mb-3" style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', borderColor: 'rgba(255, 255, 255, 0.2)' }}>
-                    <span className="pulse-dot" style={{ backgroundColor: '#ffffff', boxShadow: '0 0 0 0 rgba(255, 255, 255, 0.7)' }}></span>
-                    Get in Touch
-                  </div>
+
                   <h2 className="text-white mb-3" style={{ fontSize: '36px', fontWeight: 800, lineHeight: 1.2 }}>
                     Ready to Partner with Industry Leaders?
                   </h2>

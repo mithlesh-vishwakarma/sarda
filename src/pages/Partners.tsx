@@ -24,9 +24,7 @@ export const Partners: React.FC = () => {
       >
         <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
         <div className="container-fluid container-xl position-relative text-center z-10">
-          <span className="hero-badge" data-aos="fade-up" data-aos-delay="100">
-            <span className="pulse-dot"></span>Strategic Alliances
-          </span>
+
           <h1 className="text-white font-extrabold tracking-tight mt-2" data-aos="fade-up" data-aos-delay="200" style={{ fontSize: '3.2rem' }}>
             Our Trusted Partners
           </h1>
@@ -43,33 +41,8 @@ export const Partners: React.FC = () => {
         </div>
       </div>
 
-      {/* Intro Section */}
-      <section className="about section" style={{ padding: '80px 0 40px 0' }}>
-        <div className="container-fluid container-xl">
-          <div className="row align-items-center gy-4">
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.08)', color: 'var(--primary)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-                <span className="partner-glow-dot"></span>
-                Synergy & Quality
-              </div>
-              <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', lineHeight: '1.3' }} className="mb-4">
-                Bridging Advanced Chemistry and Textile Production
-              </h2>
-            </div>
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <p style={{ color: '#555e6b', fontSize: '15.5px', lineHeight: '1.8' }}>
-                Our alliances are built on a shared commitment to scientific excellence and operational integrity. As authorized distributors and agents, {companyName} seamlessly bridges the gap between pioneering chemical research and the practical demands of modern textile manufacturing—ensuring certified quality standards, optimized cost structures, and a highly resilient supply chain.
-              </p>
-              <p style={{ color: '#555e6b', fontSize: '15.5px', lineHeight: '1.8', margin: 0 }}>
-                By integrating decades of technical expertise with progressive eco-conscious values, we collaborate closely with our partners to address sizing, finishing, and coloration challenges, empowering regional textile houses to optimize yield while upholding international environmental standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Partners Showcase Section */}
-      <section className="partners-section pt-4 pb-5">
+      <section className="partners-section pt-5 pb-5">
         <div className="container-fluid container-xl">
 
           {/* Partner 1: Ran Chemicals & RSA Industries */}
@@ -77,9 +50,7 @@ export const Partners: React.FC = () => {
             <div className="row align-items-center gy-5">
               {/* Text Column */}
               <div className="col-lg-7 order-last order-lg-first">
-                <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.06)', color: 'var(--primary)', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>
-                  Authorized Dealer
-                </div>
+
                 <h3 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--secondary)', marginBottom: '8px' }}>
                   RAN CHEMICALS PVT. LTD & RSA INDUSTRIES PVT. LTD
                 </h3>
@@ -88,7 +59,7 @@ export const Partners: React.FC = () => {
                 </h6>
 
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  {companyName} is proud to be an authorized dealer for both Ran Chemicals and RSA
+                  {companyName} is proud to partner with both Ran Chemicals and RSA
                   Industries, two highly esteemed names in the chemical sector based in Nagpur, India with
                   more than three decades of experience in developing and manufacturing next-generation
                   speciality formulations for applications across textile.
@@ -107,33 +78,13 @@ export const Partners: React.FC = () => {
                   advancements and deliver superior solutions to its clients.
                 </p>
 
-                {/* Stat grid */}
-                <div className="row g-3 mb-4">
-                  <div className="col-4">
-                    <div className="partner-stat-pill">
-                      <span className="partner-stat-val">30+ Yrs</span>
-                      <span className="partner-stat-lbl">Expertise</span>
-                    </div>
-                  </div>
-                  <div className="col-4">
-                    <div className="partner-stat-pill">
-                      <span className="partner-stat-val">Nagpur</span>
-                      <span className="partner-stat-lbl">HQ Base</span>
-                    </div>
-                  </div>
-                  <div className="col-4">
-                    <div className="partner-stat-pill">
-                      <span className="partner-stat-val">Premium</span>
-                      <span className="partner-stat-lbl">Formulations</span>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* Capabilities list */}
                 <ul className="list-unstyled mb-4" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
                   <li className="d-flex align-items-start gap-3">
                     <i className="bi bi-patch-check-fill text-primary" style={{ fontSize: '18px' }}></i>
-                    <span style={{ fontSize: '14.5px', color: '#334155' }}>Authorized dealer access ensures authenticated batches, direct technical support, and competitive factory prices.</span>
+                    <span style={{ fontSize: '14.5px', color: '#334155' }}>Direct access ensures authenticated batches, direct technical support, and competitive factory prices.</span>
                   </li>
                   <li className="d-flex align-items-start gap-3">
                     <i className="bi bi-patch-check-fill text-primary" style={{ fontSize: '18px' }}></i>
@@ -161,9 +112,7 @@ export const Partners: React.FC = () => {
               <div className="col-lg-5 order-first order-lg-last">
                 <div className="partner-img-frame">
                   <img src={ranChemicalsImg} alt="Ran Chemicals and RSA Industries Nagpur Facilities" />
-                  <div className="position-absolute" style={{ top: '20px', right: '20px', background: 'rgba(14, 29, 52, 0.85)', color: '#ffffff', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '6px 14px', borderRadius: '30px', backdropFilter: 'blur(4px)', border: '1px solid rgba(255, 255, 255, 0.15)', zIndex: 2 }}>
-                    📍 Nagpur Facility
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -176,17 +125,13 @@ export const Partners: React.FC = () => {
               <div className="col-lg-5">
                 <div className="partner-img-frame">
                   <img src={everestStarchImg} alt="Everest Starch India Manufacturing Facility" />
-                  <div className="position-absolute" style={{ top: '20px', left: '20px', background: 'rgba(14, 29, 52, 0.85)', color: '#ffffff', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '6px 14px', borderRadius: '30px', backdropFilter: 'blur(4px)', border: '1px solid rgba(255, 255, 255, 0.15)', zIndex: 2 }}>
-                    🏭 Processing Plant
-                  </div>
+
                 </div>
               </div>
 
               {/* Text Column */}
               <div className="col-lg-7">
-                <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.06)', color: 'var(--primary)', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>
-                  Authorized Agent
-                </div>
+
                 <h3 style={{ fontSize: '28px', fontWeight: 800, color: 'var(--secondary)', marginBottom: '8px' }}>
                   EVEREST STARCH INDIA PVT. LTD
                 </h3>
@@ -195,14 +140,14 @@ export const Partners: React.FC = () => {
                 </h6>
 
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  {companyName} is proud to be the authorized agent of Everest Starch India for
+                  {companyName} is proud to partner with Everest Starch India for
                   their premium product, maize starch. At present, Everest Starch is processing 600 metric
                   tons of corn (maize) per day. The company's locational advantages allow it to maintain
                   proper procurement, processing, and supply arrangements. This partnership reflects {companyName}'s commitment to delivering top-tier products and solutions to its
                   customers.
                 </p>
                 <p style={{ color: '#555e6b', fontSize: '15px', lineHeight: '1.7' }}>
-                  As the authorized agent, {companyName} ensures the availability of high-quality
+                  Through this partnership, {companyName} ensures the availability of high-quality
                   maize starch from Everest Starch India, known for its superior performance and reliability.
                   This collaboration enhances {companyName}'s product portfolio, enabling them to
                   meet the diverse needs of various industries, including food processing, textiles,
@@ -216,33 +161,13 @@ export const Partners: React.FC = () => {
                   available.
                 </p>
 
-                {/* Stat grid */}
-                <div className="row g-3 mb-4">
-                  <div className="col-4">
-                    <div className="partner-stat-pill">
-                      <span className="partner-stat-val">600 MT</span>
-                      <span className="partner-stat-lbl">Daily Cap</span>
-                    </div>
-                  </div>
-                  <div className="col-4">
-                    <div className="partner-stat-pill">
-                      <span className="partner-stat-val">Purity</span>
-                      <span className="partner-stat-lbl">High Grade</span>
-                    </div>
-                  </div>
-                  <div className="col-4">
-                    <div className="partner-stat-pill">
-                      <span className="partner-stat-val">Textile</span>
-                      <span className="partner-stat-lbl">Sizing Focus</span>
-                    </div>
-                  </div>
-                </div>
+
 
                 {/* Capabilities list */}
                 <ul className="list-unstyled mb-4" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
                   <li className="d-flex align-items-start gap-3">
                     <i className="bi bi-patch-check-fill text-primary" style={{ fontSize: '18px' }}></i>
-                    <span style={{ fontSize: '14.5px', color: '#334155' }}>Authorized agent guarantees standard pricing and consistent batch specification certificates.</span>
+                    <span style={{ fontSize: '14.5px', color: '#334155' }}>Direct cooperation guarantees standard pricing and consistent batch specification certificates.</span>
                   </li>
                   <li className="d-flex align-items-start gap-3">
                     <i className="bi bi-patch-check-fill text-primary" style={{ fontSize: '18px' }}></i>
@@ -275,10 +200,7 @@ export const Partners: React.FC = () => {
       <section className="services section" style={{ padding: '80px 0', borderTop: '1px solid rgba(var(--primary-rgb), 0.08)' }}>
         <div className="container-fluid container-xl">
           <div className="text-center mb-5" data-aos="fade-up">
-            <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(var(--primary-rgb), 0.08)', color: 'var(--primary)', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-              <span className="partner-glow-dot"></span>
-              Core Value Deliverables
-            </div>
+
             <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)' }}>Our Operational Standards</h2>
             <p style={{ maxWidth: '650px', margin: '15px auto 0 auto', color: '#555e6b', fontSize: '15.5px' }}>
               Working alongside global leaders allows us to guarantee reliable performance, cost efficiency, and certified safety.
@@ -293,10 +215,10 @@ export const Partners: React.FC = () => {
                   <i className="bi bi-award-fill" style={{ fontSize: '32px' }}></i>
                 </div>
                 <h3 style={{ fontSize: '19px', fontWeight: 700, color: 'var(--secondary)', textAlign: 'center', marginBottom: '12px' }}>
-                  Authorized Status
+                  Quality Guarantee
                 </h3>
                 <p style={{ fontSize: '14.2px', color: '#555e6b', lineHeight: '1.6', textAlign: 'center', margin: 0 }}>
-                  Direct dealer and agent authorizations guarantee product purity, original batch certificates, and manufacturer warranty.
+                  Direct manufacturer collaborations guarantee product purity, original batch certificates, and full quality compliance.
                 </p>
               </div>
             </div>

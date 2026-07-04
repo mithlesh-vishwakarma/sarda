@@ -11,6 +11,8 @@ import 'swiper/css/pagination';
 // Import Assets
 import pageTitleBg from '../assets/img/page-title-bg.jpg';
 import mission1 from '../assets/img/mision-1.jpg';
+import journeyImg from '../assets/img/journey.png';
+import lookingAheadImg from '../assets/img/looking-ahead.png';
 import pannechandSarda from '../assets/img/team/pannechand-sarda sample 2.jpg';
 import manishSarda from '../assets/img/team/manish1.png';
 import rishikaSarda from '../assets/img/team/rishika1.png';
@@ -166,7 +168,9 @@ const FutureIllustration: React.FC = () => (
 );
 
 export const About: React.FC = () => {
-  const { companyName } = useBrand();
+  const brand = useBrand();
+  const { companyName } = brand;
+  const isJupiter = companyName === 'Jupiter Organics';
 
   useEffect(() => {
     const swiperInstance = new Swiper('.swiper', {
@@ -218,14 +222,11 @@ export const About: React.FC = () => {
       >
         <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
         <div className="container-fluid container-xl position-relative text-center z-10">
-          <span className="hero-badge" data-aos="fade-up" data-aos-delay="100">
-            <span className="pulse-dot"></span>About Us
-          </span>
           <h1 className="text-white font-extrabold tracking-tight mt-2" data-aos="fade-up" data-aos-delay="200" style={{ fontSize: '3.2rem' }}>
             Company Overview
           </h1>
           <p className="text-slate-300 max-w-3xl mx-auto mt-3" data-aos="fade-up" data-aos-delay="300" style={{ fontSize: '1.1rem', lineHeight: '1.7' }}>
-            Founded in 1997 by Mr. Pannechand Sarda & Mr. Manish Kumar Sarda, {companyName} has grown to
+            Founded in {isJupiter ? '2006' : '1997'} by Mr. Pannechand Sarda & Mr. Manish Kumar Sarda, {companyName} has grown to
             become a leading player in the chemical trading industry. With a steadfast commitment to quality and
             customer satisfaction, we have established a strong reputation for reliability and excellence. Our company
             specializes in sourcing, distributing, and marketing a wide range of chemicals, catering to the textile
@@ -247,10 +248,7 @@ export const About: React.FC = () => {
           <div className="row align-items-center gy-5">
             {/* Left Column: Founder's Message and Vision */}
             <div className="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
-              <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-                <span style={{ width: '6px', height: '6px', backgroundColor: '#0d42ff', borderRadius: '50%', display: 'inline-block' }}></span>
-                Leadership
-              </div>
+
               <h2 className="mb-4" style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)' }}>Founder's Vision</h2>
 
               <div className="founder-message-card mb-5">
@@ -268,7 +266,7 @@ export const About: React.FC = () => {
               </div>
 
               <p className="mb-5" style={{ color: '#555e6b', lineHeight: 1.7, fontSize: '15px' }}>
-                With their entrepreneurial spirit and visionary leadership, our founders laid the foundation of {companyName} in 1997. Over the past two decades, their deep industry intelligence and commitment
+                With their entrepreneurial spirit and visionary leadership, our founders laid the foundation of {companyName} in {isJupiter ? '2006' : '1997'}. Over the past two decades, their deep industry intelligence and commitment
                 to client satisfaction have guided the enterprise's expansion, establishing it as a hallmark of reliability.
               </p>
 
@@ -346,15 +344,15 @@ export const About: React.FC = () => {
                     style={{
                       width: '48px',
                       height: '48px',
-                      background: 'linear-gradient(135deg, #0d42ff 0%, #002aa3 100%)',
-                      boxShadow: '0 8px 16px rgba(13, 66, 255, 0.3)'
+                      background: isJupiter ? 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)' : 'linear-gradient(135deg, #0d42ff 0%, #002aa3 100%)',
+                      boxShadow: isJupiter ? '0 8px 16px rgba(var(--primary-rgb), 0.3)' : '0 8px 16px rgba(13, 66, 255, 0.3)'
                     }}
                   >
                     <i className="bi bi-patch-check-fill" style={{ fontSize: '22px' }}></i>
                   </div>
                   <div>
-                    <h5 className="mb-0 font-bold text-[#001973]" style={{ fontSize: '14px', fontWeight: 700 }}>Established 1997</h5>
-                    <p className="mb-0 text-muted" style={{ fontSize: '12px' }}>27+ Years of Chemical Trading</p>
+                    <h5 className="mb-0 font-bold" style={{ fontSize: '14px', fontWeight: 700, color: isJupiter ? 'var(--primary)' : '#001973' }}>Established {isJupiter ? '2006' : '1997'}</h5>
+                    <p className="mb-0 text-muted" style={{ fontSize: '12px' }}>{isJupiter ? '20+' : '27+'} Years of Chemical Trading</p>
                   </div>
                 </div>
               </div>
@@ -418,10 +416,6 @@ export const About: React.FC = () => {
       {/* Team Section */}
       <section id="team" className="team section" style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container-fluid container-xl text-center mb-5" data-aos="fade-up">
-          <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-            <span style={{ width: '6px', height: '6px', backgroundColor: '#0d42ff', borderRadius: '50%', display: 'inline-block' }}></span>
-            Board of Directors
-          </div>
           <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', marginBottom: '15px' }}>Our Team</h2>
           <div className="mx-auto" style={{ width: '50px', height: '4px', background: '#0d42ff', borderRadius: '2px' }}></div>
         </div>
@@ -487,19 +481,26 @@ export const About: React.FC = () => {
             <div className="col-lg-5 col-md-12 d-flex justify-content-center" data-aos="zoom-out" data-aos-delay="100">
               <div className="premium-glass-frame" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
                 <div className="frame-inner" style={{ border: 'none', background: 'transparent', boxShadow: 'none', overflow: 'visible' }}>
-                  <JourneyIllustration />
+                  {isJupiter ? (
+                    <img 
+                      src={journeyImg} 
+                      alt="Our Journey" 
+                      className="img-fluid transition duration-500 hover:scale-[1.02]" 
+                      style={{ borderRadius: '16px', maxWidth: '100%', height: 'auto', boxShadow: '0 15px 35px rgba(217, 133, 27, 0.15)' }} 
+                    />
+                  ) : (
+                    <JourneyIllustration />
+                  )}
                 </div>
               </div>
             </div>
 
             <div className="col-lg-7 col-md-12" data-aos="fade-up" data-aos-delay="150">
               <div className="premium-story-card">
-                <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-                  <i className="bi bi-compass-fill"></i> Our Legacy
-                </div>
+
                 <h3>Our Journey</h3>
                 <p className="lead mb-4" style={{ fontSize: '16px', color: '#555e6b', lineHeight: '1.7' }}>
-                  From a small chemical trading house in 1997 to a signature of reliability, {companyName} has built a legacy of trust, partnership, and absolute quality.
+                  From a small chemical trading house in {isJupiter ? '2006' : '1997'} to a signature of reliability, {companyName} has built a legacy of trust, partnership, and absolute quality.
                 </p>
 
                 {/* Milestone Timeline */}
@@ -507,7 +508,7 @@ export const About: React.FC = () => {
                   <div className="timeline-item-custom">
                     <div className="timeline-dot"></div>
                     <div className="timeline-content-custom">
-                      <span className="timeline-year">1997</span>
+                      <span className="timeline-year">{isJupiter ? '2006' : '1997'}</span>
                       <h4 className="timeline-title">Humble Beginnings</h4>
                       <p className="timeline-desc">Started with a small dedicated team and limited resources, laying down a customer-first philosophy.</p>
                     </div>
@@ -516,7 +517,7 @@ export const About: React.FC = () => {
                   <div className="timeline-item-custom">
                     <div className="timeline-dot"></div>
                     <div className="timeline-content-custom">
-                      <span className="timeline-year">2005 - 2018</span>
+                      <span className="timeline-year">{isJupiter ? '2008 - 2018' : '2005 - 2018'}</span>
                       <h4 className="timeline-title">Strategic Growth</h4>
                       <p className="timeline-desc">Expanded operations by forging alliances with top-tier global manufacturers and introducing rigorous quality controls.</p>
                     </div>
@@ -540,9 +541,7 @@ export const About: React.FC = () => {
           <div className="row gy-5 align-items-center">
             <div className="col-lg-7 col-md-12 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
               <div className="premium-story-card">
-                <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-                  <i className="bi bi-rocket-takeoff-fill"></i> Future Outlook
-                </div>
+
                 <h3>Looking Ahead</h3>
                 <p className="lead mb-4" style={{ fontSize: '16px', color: '#555e6b', lineHeight: '1.7' }}>
                   We embrace the future with optimism, continuous learning, and a focus on steering the chemical trading sector towards greener, smarter solutions.
@@ -587,7 +586,16 @@ export const About: React.FC = () => {
             <div className="col-lg-5 col-md-12 order-1 order-lg-2 d-flex justify-content-center" data-aos="zoom-out" data-aos-delay="250">
               <div className="premium-glass-frame" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
                 <div className="frame-inner" style={{ border: 'none', background: 'transparent', boxShadow: 'none', overflow: 'visible' }}>
-                  <FutureIllustration />
+                  {isJupiter ? (
+                    <img 
+                      src={lookingAheadImg} 
+                      alt="Looking Ahead" 
+                      className="img-fluid transition duration-500 hover:scale-[1.02]" 
+                      style={{ borderRadius: '16px', maxWidth: '100%', height: 'auto', boxShadow: '0 15px 35px rgba(217, 133, 27, 0.15)' }} 
+                    />
+                  ) : (
+                    <FutureIllustration />
+                  )}
                 </div>
               </div>
             </div>
@@ -598,10 +606,7 @@ export const About: React.FC = () => {
       {/* Core Values Section */}
       <section id="core-values" className="core-values-slider-section section">
         <div className="container-fluid container-xl text-center mb-5" data-aos="fade-up">
-          <div className="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style={{ background: 'rgba(13, 66, 255, 0.08)', color: '#0d42ff', fontSize: '12px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>
-            <span style={{ width: '6px', height: '6px', backgroundColor: '#0d42ff', borderRadius: '50%', display: 'inline-block' }}></span>
-            Our Foundation
-          </div>
+
           <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', marginBottom: '15px' }}>Core Values</h2>
           <div className="mx-auto" style={{ width: '50px', height: '4px', background: '#0d42ff', borderRadius: '2px' }}></div>
         </div>

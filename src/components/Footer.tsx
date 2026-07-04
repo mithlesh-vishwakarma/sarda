@@ -20,17 +20,17 @@ export const Footer: React.FC = () => {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <Link to="/" className="logo d-flex align-items-center">
-              <img 
-                src={logo} 
-                alt={`${companyName} Logo`} 
-                style={{ 
-                  maxHeight: '70px', 
-                  backgroundColor: '#ffffff', 
-                  padding: '8px 20px', 
+              <img
+                src={logo}
+                alt={`${companyName} Logo`}
+                style={{
+                  maxHeight: '70px',
+                  backgroundColor: '#ffffff',
+                  padding: '8px 20px',
                   display: 'inline-block',
                   objectFit: 'contain',
                   borderRadius: '6px'
-                }} 
+                }}
               />
             </Link>
             <p>
