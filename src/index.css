@@ -39,6 +39,7 @@
 .hero {
   position: relative;
   overflow: hidden;
+  background-color: var(--hero-bg-color, #0e1d34) !important;
 }
 .hero::before {
   content: "" !important;
@@ -72,7 +73,7 @@
   gap: 8px;
   background-color: rgba(var(--primary-rgb), 0.12);
   border: 1px solid rgba(var(--primary-rgb), 0.25);
-  color: #a3b8ff;
+  color: var(--primary-light);
   padding: 8px 16px;
   border-radius: 50px;
   font-size: 12px;
@@ -108,7 +109,7 @@
 .hero-glass-card {
   position: relative;
   z-index: 5 !important;
-  background: rgba(14, 29, 52, 0.72) !important;
+  background: var(--hero-card-bg, rgba(14, 29, 52, 0.72)) !important;
   backdrop-filter: blur(16px) !important;
   -webkit-backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.09) !important;
@@ -250,7 +251,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(14, 29, 52, 0.8) 0%, rgba(0, 18, 46, 0.85) 100%) !important;
+  background: var(--cta-bg-grad, linear-gradient(135deg, rgba(14, 29, 52, 0.8) 0%, rgba(0, 18, 46, 0.85) 100%)) !important;
   z-index: 2;
   pointer-events: none;
 }
@@ -280,7 +281,7 @@
   inset: 0 !important;
   z-index: 99999 !important;
   overflow: hidden !important;
-  background-color: #0e1d34 !important; /* deep navy theme */
+  background-color: var(--preloader-bg, #0e1d34) !important; /* deep navy theme */
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -305,7 +306,7 @@
 .atom-loader .nucleus {
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, var(--primary) 0%, #00228c 100%);
+  background: radial-gradient(circle, var(--primary) 0%, var(--primary-dark) 100%);
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.8);
   z-index: 10;
@@ -384,7 +385,7 @@
 
 /* Services Section Background & Ambient Glows */
 .services {
-  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%) !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%) !important;
   position: relative;
   overflow: hidden;
 }
@@ -433,7 +434,7 @@ button:focus-visible {
 /* --- Footer Styling Upgrades --- */
 .footer {
   border-top: 3px solid var(--secondary) !important; /* Top border accent */
-  background: linear-gradient(180deg, #0e1d34 0%, #00112a 100%) !important;
+  background: var(--footer-bg, linear-gradient(180deg, #0e1d34 0%, #00112a 100%)) !important;
   position: relative;
   overflow: hidden;
 }
@@ -616,7 +617,7 @@ button:focus-visible {
   transition: all 0.4s ease !important;
 }
 .premium-competency-card:hover .premium-competency-icon-wrapper {
-  background: linear-gradient(135deg, var(--primary) 0%, #002aa3 100%) !important;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%) !important;
   color: #ffffff !important;
   transform: scale(1.1) !important;
   box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.25) !important;
@@ -707,7 +708,7 @@ button:focus-visible {
 /* Features Wrapper styling */
 .features-section-custom {
   position: relative;
-  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 50%, #f4f7ff 100%) !important;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 50%, var(--bg-light) 100%) !important;
   padding: 100px 0 !important;
   overflow: hidden;
 }
@@ -879,7 +880,7 @@ button:focus-visible {
 }
 
 .pillar-item:hover .pillar-icon-box {
-  background: linear-gradient(135deg, var(--primary) 0%, #002aa3 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: #ffffff;
   box-shadow: 0 4px 10px rgba(var(--primary-rgb), 0.2);
 }
@@ -953,7 +954,7 @@ button:focus-visible {
 /* --- Custom Stats & Future Dashboards --- */
 
 .stats-showcase-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f4f7ff 100%) !important;
+  background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%) !important;
   border: 1px solid rgba(var(--primary-rgb), 0.08) !important;
   border-radius: 24px !important;
   padding: 40px 30px !important;
@@ -1012,7 +1013,7 @@ button:focus-visible {
 
 /* Future Dashboard styles */
 .future-dashboard-card {
-  background: linear-gradient(135deg, #0e1d34 0%, #00112a 100%) !important;
+  background: var(--dark-bg-135, linear-gradient(135deg, #0e1d34 0%, #00112a 100%)) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 24px !important;
   padding: 40px 30px !important;
@@ -1100,7 +1101,7 @@ button:focus-visible {
 
 .core-values-section {
   position: relative;
-  background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%) !important;
+  background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%) !important;
   padding: 100px 0 !important;
   overflow: hidden;
 }
@@ -1230,7 +1231,7 @@ button:focus-visible {
 
 .core-values-slider-section {
   position: relative;
-  background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%) !important;
+  background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 100%) !important;
   padding: 80px 0 !important;
   overflow: hidden;
 }
@@ -1358,7 +1359,7 @@ button:focus-visible {
 /* --- Redesigned Partners Page UI --- */
 .partners-section {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%) !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%) !important;
   padding: 80px 0 !important;
   overflow: hidden;
 }
@@ -1453,7 +1454,7 @@ button:focus-visible {
 /* --- Redesigned Contact Page UI --- */
 .contact-section {
   position: relative;
-  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%) !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%) !important;
   padding: 80px 0 !important;
   overflow: hidden;
 }
@@ -1819,7 +1820,7 @@ button:focus-visible {
 }
 
 .tree-node-item .tree-node-icon {
-  color: #a3b8ff;
+  color: var(--primary-light);
   font-size: 12px;
 }
 
@@ -1928,6 +1929,10 @@ button:focus-visible {
   --bs-btn-hover-border-color: var(--secondary) !important;
   --bs-btn-active-bg: var(--secondary) !important;
   --bs-btn-active-border-color: var(--secondary) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
 }
 
 

@@ -5,6 +5,7 @@ import { useBrand } from '../context/BrandContext';
 export const Footer: React.FC = () => {
   const { logo, companyName, email, phone, address, socialLinks } = useBrand();
   const currentYear = new Date().getFullYear();
+  const isJupiter = companyName === 'Jupiter Organics';
 
   const handleMailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -20,21 +21,21 @@ export const Footer: React.FC = () => {
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
             <Link to="/" className="logo d-flex align-items-center">
-              <img 
-                src={logo} 
-                alt={`${companyName} Logo`} 
-                style={{ 
-                  maxHeight: '70px', 
-                  backgroundColor: '#ffffff', 
-                  padding: '8px 20px', 
+              <img
+                src={logo}
+                alt={`${companyName} Logo`}
+                style={{
+                  maxHeight: '70px',
+                  backgroundColor: '#ffffff',
+                  padding: '8px 20px',
                   display: 'inline-block',
                   objectFit: 'contain',
                   borderRadius: '6px'
-                }} 
+                }}
               />
             </Link>
             <p>
-              {companyName}, a leader in textile chemicals for 27 years, delivers high-performance
+              {companyName}, a leader in textile chemicals for {isJupiter ? '20' : '27'} years, delivers high-performance
               products through strategic partnerships, ensuring quality, efficiency, and innovation in
               industry solutions.
             </p>

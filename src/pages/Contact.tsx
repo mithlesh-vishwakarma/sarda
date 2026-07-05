@@ -3,7 +3,9 @@ import { useBrand } from '../context/BrandContext';
 import pageTitleBg from '../assets/img/page-title-bg.jpg';
 
 export const Contact: React.FC = () => {
-  const { companyName, email, phone, googleMapsEmbedUrl, web3FormsAccessKey } = useBrand();
+  const brand = useBrand();
+  const { companyName, email, phone, googleMapsEmbedUrl, web3FormsAccessKey } = brand;
+  const isJupiter = companyName === 'Jupiter Organics';
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -71,9 +73,6 @@ export const Contact: React.FC = () => {
       >
         <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]"></div>
         <div className="container-fluid container-xl position-relative text-center z-10">
-          <span className="hero-badge" data-aos="fade-up" data-aos-delay="100">
-            <span className="pulse-dot"></span>Get In Touch
-          </span>
           <h1 className="text-white font-extrabold tracking-tight mt-2" data-aos="fade-up" data-aos-delay="200" style={{ fontSize: '3.2rem' }}>
             Contact Us
           </h1>
@@ -95,10 +94,19 @@ export const Contact: React.FC = () => {
                 <div className="contact-icon-wrapper">
                   <i className="bi bi-geo-alt"></i>
                 </div>
-                <h3>Surat Headquarters</h3>
+                <h3>Surat Office</h3>
                 <div className="company-group">
-                  <p className="cmp-name">{companyName}</p>
-                  <p className="cmp-name">{companyName === 'Jupiter Organics' ? 'Sarda Chemical Corporation' : 'Jupiter Organics Pvt Ltd'}</p>
+                  {isJupiter ? (
+                    <>
+                      <p className="cmp-name">Jupiter Organics pvt ltd</p>
+                      <p className="cmp-name">Sarda chemical corporation</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="cmp-name">{companyName}</p>
+                      <p className="cmp-name">{companyName === 'Jupiter Organics' ? 'Sarda Chemical Corporation' : 'Jupiter Organics Pvt Ltd'}</p>
+                    </>
+                  )}
                 </div>
                 <p className="mt-2 text-slate-500">
                   326, Ishana Business Hub Althan Bamroli Expressway, VIP Road, nr. Dmart, Pandesara, Surat, Gujarat 394221
@@ -112,9 +120,13 @@ export const Contact: React.FC = () => {
                 <div className="contact-icon-wrapper">
                   <i className="bi bi-building"></i>
                 </div>
-                <h3>Mumbai Branch</h3>
+                <h3>Mumbai Office</h3>
                 <div className="company-group">
-                  <p className="cmp-name">Jupiter Organics</p>
+                  {isJupiter ? (
+                    <p className="cmp-name">Jupiter Chemicals</p>
+                  ) : (
+                    <p className="cmp-name">Jupiter Organics</p>
+                  )}
                 </div>
                 <p className="mt-2 text-slate-500">
                   313/319, Room No. 15, Harish Chamber, Samuel Street, Mumbai
