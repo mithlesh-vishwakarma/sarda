@@ -35,6 +35,14 @@ export interface BrandConfig {
   btnPrimaryStart: string;
   btnPrimaryEnd: string;
   footerAccent: string;
+  primaryLight: string;
+  bgLight: string;
+  preloaderBg: string;
+  footerBg: string;
+  ctaBgGrad: string;
+  darkBg135: string;
+  heroBgColor: string;
+  heroCardBg: string;
 }
 
 const BrandContext = createContext<BrandConfig | undefined>(undefined);
@@ -76,6 +84,15 @@ export const BrandProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     root.style.setProperty('--btn-primary-start', brand.btnPrimaryStart);
     root.style.setProperty('--btn-primary-end', brand.btnPrimaryEnd);
     root.style.setProperty('--footer-accent', brand.footerAccent);
+    root.style.setProperty('--primary-light', brand.primaryLight);
+    root.style.setProperty('--bg-light', brand.bgLight);
+    root.style.setProperty('--preloader-bg', brand.preloaderBg);
+    root.style.setProperty('--footer-bg', brand.footerBg);
+    root.style.setProperty('--cta-bg-grad', brand.ctaBgGrad);
+    root.style.setProperty('--dark-bg-135', brand.darkBg135);
+    root.style.setProperty('--hero-bg-color', brand.heroBgColor);
+    root.style.setProperty('--hero-card-bg', brand.heroCardBg);
+    root.style.setProperty('--alt-background-color', brand.heroBgColor);
 
     // Orbit loader colors
     root.style.setProperty('--orbit-1', brand.orbit1Color);

@@ -16,6 +16,7 @@ import ctaBg from '../assets/img/cta-bg.jpg';
 
 export const Home: React.FC = () => {
   const { roundedLogo, companyName } = useBrand();
+  const isJupiter = companyName === 'Jupiter Organics';
 
   return (
     <>
@@ -28,7 +29,7 @@ export const Home: React.FC = () => {
             {/* Text details inside a premium glassmorphic card */}
             <div className="col-lg-7 order-1 order-lg-1" data-aos="fade-up" data-aos-delay="100">
               <div className="hero-glass-card">
-                <h4 className="text-uppercase tracking-wider mb-2" style={{ color: '#a3b8ff', fontSize: '14px', fontWeight: 600, letterSpacing: '2px' }}>
+                <h4 className="text-uppercase tracking-wider mb-2" style={{ color: isJupiter ? '#ffdca3' : '#a3b8ff', fontSize: '14px', fontWeight: 600, letterSpacing: '2px' }}>
                   Welcome to
                 </h4>
                 <h1 className="text-white mb-4" style={{ fontSize: '38px', fontWeight: 800, lineHeight: 1.25 }}>

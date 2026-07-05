@@ -13,6 +13,7 @@ const sardaConfig = {
   primaryColor: '#0d42ff',
   primaryColorRgb: '13, 66, 255',
   primaryDark: '#002aa3',
+  primaryLight: '#a3b8ff',
   secondaryColor: '#4e7536', // Green secondary color
   secondaryColorRgb: '78, 117, 54',
   accentColor: '#0d42ff',
@@ -44,7 +45,16 @@ const sardaConfig = {
   btnPrimaryEnd: '#3b5929',
   
   // Footer accents (green for Sarda)
-  footerAccent: '#4e7536'
+  footerAccent: '#4e7536',
+
+  // Dynamic Background and loader configs
+  preloaderBg: '#0e1d34',
+  footerBg: 'linear-gradient(180deg, #0e1d34 0%, #00112a 100%)',
+  ctaBgGrad: 'linear-gradient(135deg, rgba(14, 29, 52, 0.8) 0%, rgba(0, 18, 46, 0.85) 100%)',
+  darkBg135: 'linear-gradient(135deg, #0e1d34 0%, #00112a 100%)',
+  bgLight: '#f4f7ff',
+  heroBgColor: '#0e1d34',
+  heroCardBg: 'rgba(14, 29, 52, 0.72)'
 };
 
 const jupiterConfig = {
@@ -52,13 +62,14 @@ const jupiterConfig = {
   logo: jupiterLogo,
   roundedLogo: jupiterRoundedLogo,
   favicon: jupiterFavicon,
-  primaryColor: '#d9851b',
-  primaryColorRgb: '217, 133, 27',
-  primaryDark: '#a55d0a',
-  secondaryColor: '#0b1838',
-  secondaryColorRgb: '11, 24, 56',
-  accentColor: '#d9851b',
-  accentColorRgb: '217, 133, 27',
+  primaryColor: '#de9127',
+  primaryColorRgb: '222, 145, 39',
+  primaryDark: '#a36100',
+  primaryLight: '#ffdca3',
+  secondaryColor: '#3a2000',
+  secondaryColorRgb: '58, 32, 0',
+  accentColor: '#de9127',
+  accentColorRgb: '222, 145, 39',
   websiteTitle: 'Jupiter Organics - Premium Sustainable Chemicals',
   metaDescription: 'Jupiter Organics delivers high-performance and eco-friendly chemical formulations for modern textile manufacturing and processing.',
   email: 'shubhamsarda@sardachemicalcorporation.com',
@@ -70,23 +81,32 @@ const jupiterConfig = {
   },
   footerText: 'Jupiter Organics. All Rights Reserved.',
   googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14884.362063134127!2d72.8143071!3d21.1487958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051378b6c352b%3A0x25cbe5a269d7ff6b!2sSarda%20Chemical%20Corporation!5e0!3m2!1sen!2sin!4v1719056890605!5m2!1sen!2sin',
-  orbit1Color: '#4e7536',
-  orbit2Color: '#E85635',
-  orbit3Color: '#0E4981',
+  orbit1Color: '#de9127',
+  orbit2Color: '#ffba5c',
+  orbit3Color: '#ffffff',
   web3FormsAccessKey: 'ed67b5ad-afa4-4acb-9e5a-8d017f8265a9',
   
   // Header styles (translucent white for glassy backdrop blur)
   headerBg: 'rgba(255, 255, 255, 0.82)',
-  headerNavColor: '#0b1838',
-  headerNavHoverColor: '#d9851b',
-  headerBorderColor: 'rgba(11, 24, 56, 0.1)',
+  headerNavColor: '#3a2000',
+  headerNavHoverColor: '#de9127',
+  headerBorderColor: 'rgba(58, 32, 0, 0.1)',
   
   // Button styles (orange for Jupiter)
-  btnPrimaryStart: '#d9851b',
-  btnPrimaryEnd: '#a55d0a',
+  btnPrimaryStart: '#de9127',
+  btnPrimaryEnd: '#a36100',
   
   // Footer accents (orange for Jupiter)
-  footerAccent: '#d9851b'
+  footerAccent: '#de9127',
+
+  // Dynamic Background and loader configs
+  preloaderBg: '#ffffff',
+  footerBg: 'linear-gradient(180deg, #2b1900 0%, #170d00 100%)',
+  ctaBgGrad: 'linear-gradient(135deg, rgba(43, 25, 0, 0.8) 0%, rgba(23, 13, 0, 0.85) 100%)',
+  darkBg135: 'linear-gradient(135deg, #2b1900 0%, #170d00 100%)',
+  bgLight: '#fffcf7',
+  heroBgColor: '#170d00',
+  heroCardBg: 'rgba(43, 25, 0, 0.72)'
 };
 
 export const brands = {

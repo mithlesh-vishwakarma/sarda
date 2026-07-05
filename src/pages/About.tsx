@@ -11,8 +11,6 @@ import 'swiper/css/pagination';
 // Import Assets
 import pageTitleBg from '../assets/img/page-title-bg.jpg';
 import mission1 from '../assets/img/mision-1.jpg';
-import journeyImg from '../assets/img/journey.png';
-import lookingAheadImg from '../assets/img/looking-ahead.png';
 import pannechandSarda from '../assets/img/team/pannechand-sarda sample 2.jpg';
 import manishSarda from '../assets/img/team/manish1.png';
 import rishikaSarda from '../assets/img/team/rishika1.png';
@@ -34,12 +32,12 @@ const JourneyIllustration: React.FC = () => (
   <svg viewBox="0 0 500 400" className="w-100 h-auto" style={{ maxWidth: '450px' }} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="journeyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#0d42ff" stopOpacity="0.85" />
-        <stop offset="100%" stopColor="#001973" stopOpacity="1" />
+        <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.85" />
+        <stop offset="100%" stopColor="var(--primary-dark)" stopOpacity="1" />
       </linearGradient>
       <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#30b1ff" />
-        <stop offset="100%" stopColor="#0d42ff" />
+        <stop offset="0%" stopColor="var(--primary-light)" />
+        <stop offset="100%" stopColor="var(--primary)" />
       </linearGradient>
       <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="8" result="blur" />
@@ -49,8 +47,8 @@ const JourneyIllustration: React.FC = () => (
 
     {/* Background Grid Lines */}
     <g opacity="0.15">
-      <path d="M 50,0 L 50,400 M 150,0 L 150,400 M 250,0 L 250,400 M 350,0 L 350,400 M 450,0 L 450,400" stroke="#0d42ff" strokeWidth="1" strokeDasharray="5 5" />
-      <path d="M 0,50 L 500,50 M 0,150 L 500,150 M 0,250 L 500,250 M 0,350 L 500,350" stroke="#0d42ff" strokeWidth="1" strokeDasharray="5 5" />
+      <path d="M 50,0 L 50,400 M 150,0 L 150,400 M 250,0 L 250,400 M 350,0 L 350,400 M 450,0 L 450,400" stroke="var(--primary)" strokeWidth="1" strokeDasharray="5 5" />
+      <path d="M 0,50 L 500,50 M 0,150 L 500,150 M 0,250 L 500,250 M 0,350 L 500,350" stroke="var(--primary)" strokeWidth="1" strokeDasharray="5 5" />
     </g>
 
     {/* Curved Path of Growth */}
@@ -59,40 +57,40 @@ const JourneyIllustration: React.FC = () => (
 
     {/* Nodes */}
     {/* Node 1: Beginning */}
-    <circle cx="80" cy="320" r="14" fill="#ffffff" stroke="#0d42ff" strokeWidth="4" />
-    <circle cx="80" cy="320" r="6" fill="#0d42ff" />
+    <circle cx="80" cy="320" r="14" fill="#ffffff" stroke="var(--primary)" strokeWidth="4" />
+    <circle cx="80" cy="320" r="6" fill="var(--primary)" />
 
     {/* Node 2: Growth */}
-    <circle cx="250" cy="180" r="18" fill="#ffffff" stroke="#0d42ff" strokeWidth="4" filter="url(#glow)" />
+    <circle cx="250" cy="180" r="18" fill="#ffffff" stroke="var(--primary)" strokeWidth="4" filter="url(#glow)" />
     <path d="M 244,174 H 256 V 186 H 244 Z" fill="url(#accentGrad)" />
     <circle cx="250" cy="180" r="4" fill="#ffffff" />
 
     {/* Node 3: Present / Network */}
-    <circle cx="420" cy="80" r="22" fill="#ffffff" stroke="#0d42ff" strokeWidth="5" filter="url(#glow)" />
+    <circle cx="420" cy="80" r="22" fill="#ffffff" stroke="var(--primary)" strokeWidth="5" filter="url(#glow)" />
     <circle cx="420" cy="80" r="10" fill="url(#journeyGrad)" />
     <path d="M 414,80 H 426 M 420,74 V 86" stroke="#ffffff" strokeWidth="1.5" />
 
     {/* Connected Dots */}
-    <line x1="250" y1="180" x2="310" y2="240" stroke="#0d42ff" strokeWidth="1.5" strokeDasharray="3 3" />
-    <circle cx="310" cy="240" r="8" fill="#30b1ff" opacity="0.8" />
+    <line x1="250" y1="180" x2="310" y2="240" stroke="var(--primary)" strokeWidth="1.5" strokeDasharray="3 3" />
+    <circle cx="310" cy="240" r="8" fill="var(--primary-light)" opacity="0.8" />
 
-    <line x1="80" y1="320" x2="140" y2="260" stroke="#0d42ff" strokeWidth="1.5" strokeDasharray="3 3" />
-    <circle cx="140" cy="260" r="6" fill="#0d42ff" opacity="0.6" />
+    <line x1="80" y1="320" x2="140" y2="260" stroke="var(--primary)" strokeWidth="1.5" strokeDasharray="3 3" />
+    <circle cx="140" cy="260" r="6" fill="var(--primary)" opacity="0.6" />
 
-    <line x1="420" y1="80" x2="350" y2="120" stroke="#0d42ff" strokeWidth="1.5" strokeDasharray="3 3" />
-    <circle cx="350" cy="120" r="7" fill="#001973" opacity="0.8" />
+    <line x1="420" y1="80" x2="350" y2="120" stroke="var(--primary)" strokeWidth="1.5" strokeDasharray="3 3" />
+    <circle cx="350" cy="120" r="7" fill="var(--primary-dark)" opacity="0.8" />
 
     {/* Badges */}
     <g transform="translate(140, 260)" opacity="0.95">
-      <rect x="0" y="0" width="120" height="38" rx="19" fill="#ffffff" stroke="rgba(13, 66, 255, 0.12)" strokeWidth="1" />
-      <text x="60" y="24" fill="#001973" fontSize="11px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
+      <rect x="0" y="0" width="120" height="38" rx="19" fill="#ffffff" stroke="var(--primary-light)" strokeWidth="1" />
+      <text x="60" y="24" fill="var(--primary-dark)" fontSize="11px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
         🤝 Partnership
       </text>
     </g>
 
     <g transform="translate(290, 30)" opacity="0.95">
-      <rect x="0" y="0" width="120" height="38" rx="19" fill="#ffffff" stroke="rgba(13, 66, 255, 0.12)" strokeWidth="1" />
-      <text x="60" y="24" fill="#001973" fontSize="11px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
+      <rect x="0" y="0" width="120" height="38" rx="19" fill="#ffffff" stroke="var(--primary-light)" strokeWidth="1" />
+      <text x="60" y="24" fill="var(--primary-dark)" fontSize="11px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
         📈 Value Chain
       </text>
     </g>
@@ -103,8 +101,8 @@ const FutureIllustration: React.FC = () => (
   <svg viewBox="0 0 500 400" className="w-100 h-auto" style={{ maxWidth: '450px' }} fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="ecoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#2ec4b6" />
-        <stop offset="100%" stopColor="#0d42ff" />
+        <stop offset="0%" stopColor="var(--primary-light)" />
+        <stop offset="100%" stopColor="var(--primary)" />
       </linearGradient>
       <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="6" result="blur" />
@@ -113,54 +111,54 @@ const FutureIllustration: React.FC = () => (
     </defs>
 
     {/* Spheres */}
-    <circle cx="250" cy="200" r="150" stroke="rgba(48, 177, 255, 0.1)" strokeWidth="1" />
-    <circle cx="250" cy="200" r="100" stroke="rgba(13, 66, 255, 0.15)" strokeWidth="1" strokeDasharray="4 4" />
-    <circle cx="250" cy="200" r="50" stroke="rgba(13, 66, 255, 0.2)" strokeWidth="1" />
+    <circle cx="250" cy="200" r="150" stroke="rgba(var(--primary-rgb), 0.1)" strokeWidth="1" />
+    <circle cx="250" cy="200" r="100" stroke="rgba(var(--primary-rgb), 0.15)" strokeWidth="1" strokeDasharray="4 4" />
+    <circle cx="250" cy="200" r="50" stroke="rgba(var(--primary-rgb), 0.2)" strokeWidth="1" />
 
     {/* Globe */}
-    <ellipse cx="250" cy="200" rx="150" ry="50" stroke="rgba(13, 66, 255, 0.08)" strokeWidth="1" />
-    <ellipse cx="250" cy="200" rx="50" ry="150" stroke="rgba(13, 66, 255, 0.08)" strokeWidth="1" />
+    <ellipse cx="250" cy="200" rx="150" ry="50" stroke="rgba(var(--primary-rgb), 0.08)" strokeWidth="1" />
+    <ellipse cx="250" cy="200" rx="50" ry="150" stroke="rgba(var(--primary-rgb), 0.08)" strokeWidth="1" />
 
     {/* Molecular Bonds */}
-    <line x1="250" y1="200" x2="170" y2="130" stroke="#0d42ff" strokeWidth="3" />
-    <line x1="250" y1="200" x2="330" y2="130" stroke="#0d42ff" strokeWidth="3" />
-    <line x1="250" y1="200" x2="250" y2="300" stroke="#0d42ff" strokeWidth="3" />
-    <line x1="170" y1="130" x2="120" y2="180" stroke="#0d42ff" strokeWidth="2" strokeDasharray="3 3" />
-    <line x1="330" y1="130" x2="380" y2="180" stroke="#0d42ff" strokeWidth="2" strokeDasharray="3 3" />
+    <line x1="250" y1="200" x2="170" y2="130" stroke="var(--primary)" strokeWidth="3" />
+    <line x1="250" y1="200" x2="330" y2="130" stroke="var(--primary)" strokeWidth="3" />
+    <line x1="250" y1="200" x2="250" y2="300" stroke="var(--primary)" strokeWidth="3" />
+    <line x1="170" y1="130" x2="120" y2="180" stroke="var(--primary)" strokeWidth="2" strokeDasharray="3 3" />
+    <line x1="330" y1="130" x2="380" y2="180" stroke="var(--primary)" strokeWidth="2" strokeDasharray="3 3" />
 
     {/* Nodes */}
-    <circle cx="250" cy="200" r="24" fill="#ffffff" stroke="#0d42ff" strokeWidth="6" filter="url(#glow2)" />
+    <circle cx="250" cy="200" r="24" fill="#ffffff" stroke="var(--primary)" strokeWidth="6" filter="url(#glow2)" />
     <circle cx="250" cy="200" r="12" fill="url(#ecoGrad)" />
 
-    <circle cx="170" cy="130" r="18" fill="#ffffff" stroke="#0d42ff" strokeWidth="4" />
-    <circle cx="170" cy="130" r="8" fill="#30b1ff" />
+    <circle cx="170" cy="130" r="18" fill="#ffffff" stroke="var(--primary)" strokeWidth="4" />
+    <circle cx="170" cy="130" r="8" fill="var(--primary-light)" />
     <circle cx="170" cy="130" r="3" fill="#ffffff" />
 
-    <circle cx="330" cy="130" r="18" fill="#ffffff" stroke="#2ec4b6" strokeWidth="4" filter="url(#glow2)" />
-    <path d="M 324,136 C 324,128 332,124 336,124 C 336,132 328,136 324,136 Z" fill="#2ec4b6" />
+    <circle cx="330" cy="130" r="18" fill="#ffffff" stroke="var(--primary-light)" strokeWidth="4" filter="url(#glow2)" />
+    <path d="M 324,136 C 324,128 332,124 336,124 C 336,132 328,136 324,136 Z" fill="var(--primary)" />
     <path d="M 336,124 C 336,132 328,136 324,136" stroke="#ffffff" strokeWidth="1" />
 
-    <circle cx="250" cy="300" r="20" fill="#ffffff" stroke="#001973" strokeWidth="4" />
-    <rect x="246" y="290" width="8" height="12" fill="#001973" rx="1" />
-    <path d="M 242,302 H 258 L 255,296 H 245 Z" fill="#001973" />
+    <circle cx="250" cy="300" r="20" fill="#ffffff" stroke="var(--secondary)" strokeWidth="4" />
+    <rect x="246" y="290" width="8" height="12" fill="var(--secondary)" rx="1" />
+    <path d="M 242,302 H 258 L 255,296 H 245 Z" fill="var(--secondary)" />
 
     {/* Orbiting Elements */}
-    <circle cx="120" cy="180" r="6" fill="#30b1ff" />
-    <circle cx="380" cy="180" r="6" fill="#2ec4b6" />
-    <circle cx="200" cy="280" r="4" fill="#0d42ff" />
-    <circle cx="300" cy="280" r="5" fill="#0d42ff" />
+    <circle cx="120" cy="180" r="6" fill="var(--primary-light)" />
+    <circle cx="380" cy="180" r="6" fill="var(--primary)" />
+    <circle cx="200" cy="280" r="4" fill="var(--primary)" />
+    <circle cx="300" cy="280" r="5" fill="var(--primary)" />
 
     {/* Labels */}
     <g transform="translate(20, 60)" opacity="0.95">
-      <rect x="0" y="0" width="130" height="36" rx="18" fill="#ffffff" stroke="rgba(46, 196, 182, 0.15)" strokeWidth="1" />
-      <text x="65" y="22" fill="#2ec4b6" fontSize="10.5px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
+      <rect x="0" y="0" width="130" height="36" rx="18" fill="#ffffff" stroke="var(--primary-light)" strokeWidth="1" />
+      <text x="65" y="22" fill="var(--primary)" fontSize="10.5px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
         🌱 Eco-Conscious
       </text>
     </g>
 
     <g transform="translate(320, 240)" opacity="0.95">
-      <rect x="0" y="0" width="120" height="36" rx="18" fill="#ffffff" stroke="rgba(13, 66, 255, 0.12)" strokeWidth="1" />
-      <text x="60" y="22" fill="#0d42ff" fontSize="10.5px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
+      <rect x="0" y="0" width="120" height="36" rx="18" fill="#ffffff" stroke="var(--primary-light)" strokeWidth="1" />
+      <text x="60" y="22" fill="var(--primary)" fontSize="10.5px" fontWeight="700" textAnchor="middle" fontFamily="Poppins">
         ⚡ Innovation
       </text>
     </g>
@@ -277,7 +275,7 @@ export const About: React.FC = () => {
                     <div className="about-mv-icon-wrapper">
                       <i className="bi bi-bullseye"></i>
                     </div>
-                    <h4 style={{ fontSize: '20px', fontWeight: 700, color: '#001973', marginBottom: '12px' }}>Our Mission</h4>
+                    <h4 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--secondary)', marginBottom: '12px' }}>Our Mission</h4>
                     <p style={{ fontSize: '14.5px', color: '#555e6b', lineHeight: 1.6, margin: 0 }}>
                       To provide high-quality chemical products and exceptional service, fostering innovation and sustainability
                       to be a trusted partner in the textile industry.
@@ -290,7 +288,7 @@ export const About: React.FC = () => {
                     <div className="about-mv-icon-wrapper">
                       <i className="bi bi-eye"></i>
                     </div>
-                    <h4 style={{ fontSize: '20px', fontWeight: 700, color: '#001973', marginBottom: '12px' }}>Our Vision</h4>
+                    <h4 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--secondary)', marginBottom: '12px' }}>Our Vision</h4>
                     <p style={{ fontSize: '14.5px', color: '#555e6b', lineHeight: 1.6, margin: 0 }}>
                       To be a global leader in chemical trading, recognized for our commitment to quality, eco-conscious practices,
                       and supply chain responsiveness.
@@ -417,7 +415,7 @@ export const About: React.FC = () => {
       <section id="team" className="team section" style={{ padding: '80px 0', background: '#f8f9fa' }}>
         <div className="container-fluid container-xl text-center mb-5" data-aos="fade-up">
           <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', marginBottom: '15px' }}>Our Team</h2>
-          <div className="mx-auto" style={{ width: '50px', height: '4px', background: '#0d42ff', borderRadius: '2px' }}></div>
+          <div className="mx-auto" style={{ width: '50px', height: '4px', background: 'var(--primary)', borderRadius: '2px' }}></div>
         </div>
 
         <div className="container-fluid container-xl">
@@ -481,16 +479,7 @@ export const About: React.FC = () => {
             <div className="col-lg-5 col-md-12 d-flex justify-content-center" data-aos="zoom-out" data-aos-delay="100">
               <div className="premium-glass-frame" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
                 <div className="frame-inner" style={{ border: 'none', background: 'transparent', boxShadow: 'none', overflow: 'visible' }}>
-                  {isJupiter ? (
-                    <img 
-                      src={journeyImg} 
-                      alt="Our Journey" 
-                      className="img-fluid transition duration-500 hover:scale-[1.02]" 
-                      style={{ borderRadius: '16px', maxWidth: '100%', height: 'auto', boxShadow: '0 15px 35px rgba(217, 133, 27, 0.15)' }} 
-                    />
-                  ) : (
                     <JourneyIllustration />
-                  )}
                 </div>
               </div>
             </div>
@@ -586,16 +575,7 @@ export const About: React.FC = () => {
             <div className="col-lg-5 col-md-12 order-1 order-lg-2 d-flex justify-content-center" data-aos="zoom-out" data-aos-delay="250">
               <div className="premium-glass-frame" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
                 <div className="frame-inner" style={{ border: 'none', background: 'transparent', boxShadow: 'none', overflow: 'visible' }}>
-                  {isJupiter ? (
-                    <img 
-                      src={lookingAheadImg} 
-                      alt="Looking Ahead" 
-                      className="img-fluid transition duration-500 hover:scale-[1.02]" 
-                      style={{ borderRadius: '16px', maxWidth: '100%', height: 'auto', boxShadow: '0 15px 35px rgba(217, 133, 27, 0.15)' }} 
-                    />
-                  ) : (
                     <FutureIllustration />
-                  )}
                 </div>
               </div>
             </div>
@@ -608,7 +588,7 @@ export const About: React.FC = () => {
         <div className="container-fluid container-xl text-center mb-5" data-aos="fade-up">
 
           <h2 style={{ fontSize: '36px', fontWeight: 800, color: 'var(--heading-color)', marginBottom: '15px' }}>Core Values</h2>
-          <div className="mx-auto" style={{ width: '50px', height: '4px', background: '#0d42ff', borderRadius: '2px' }}></div>
+          <div className="mx-auto" style={{ width: '50px', height: '4px', background: 'var(--primary)', borderRadius: '2px' }}></div>
         </div>
 
         <div className="container-fluid container-xl" data-aos="fade-up" data-aos-delay="100">

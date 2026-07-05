@@ -5,6 +5,7 @@ import { useBrand } from '../context/BrandContext';
 export const Footer: React.FC = () => {
   const { logo, companyName, email, phone, address, socialLinks } = useBrand();
   const currentYear = new Date().getFullYear();
+  const isJupiter = companyName === 'Jupiter Organics';
 
   const handleMailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -34,7 +35,7 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p>
-              {companyName}, a leader in textile chemicals for 27 years, delivers high-performance
+              {companyName}, a leader in textile chemicals for {isJupiter ? '20' : '27'} years, delivers high-performance
               products through strategic partnerships, ensuring quality, efficiency, and innovation in
               industry solutions.
             </p>
