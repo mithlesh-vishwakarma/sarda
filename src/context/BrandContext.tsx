@@ -58,9 +58,17 @@ export const BrandProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     
     const registry = brands as Record<string, BrandConfig>;
     
-    // Check if hostname exists in brands registry
+    // 1. Exact match in registry
     if (registry[hostname]) {
       return registry[hostname];
+    }
+    
+    // 2. Substring matching (handles Hostinger preview domains, temporary domains, different TLDs)
+    if (hostname.includes('jupiter')) {
+      return registry['jupiterorganics.com'];
+    }
+    if (hostname.includes('sarda')) {
+      return registry['sardachemicalcorporation.com'];
     }
     
     // Return default fallback
