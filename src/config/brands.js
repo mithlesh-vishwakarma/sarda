@@ -1,9 +1,9 @@
 import sardaLogo from '../assets/img/sarda-logo.png';
 import sardaFavicon from '../assets/img/sarda-favicon.png'; // Updated to user's sarda-favicon.png
-import sardaRoundedLogo from '../assets/img/sarda-rounded-logo.jpeg';
+import sardaRoundedLogo from '../assets/img/sarda-rounded-logo-removebg-preview.png';
 import jupiterLogo from '../assets/img/jupiter-logo.png';
 import jupiterFavicon from '../assets/img/jupiter-favicon.png'; // Updated to user's jupiter-favicon.png
-import jupiterRoundedLogo from '../assets/img/jupiter-rounded-logo.jpeg';
+import jupiterRoundedLogo from '../assets/img/jupiter-rounded-logo-removebg.png';
 
 const sardaConfig = {
   companyName: 'Sarda Chemical Corporation',

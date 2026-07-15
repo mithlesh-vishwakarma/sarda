@@ -36,7 +36,7 @@ export const Home: React.FC = () => {
                   {companyName}
                 </h1>
                 <p className="mb-4" style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '15.5px', lineHeight: 1.6 }}>
-                  With over 27 years of excellence in the textile chemicals industry, {companyName} stands as
+                  {!isJupiter && "With over 27 years of excellence in the textile chemicals industry, "}{companyName} stands as
                   a trusted leader in chemical trading and distribution. Our unwavering commitment to quality and
                   innovation has made us a preferred partner for numerous esteemed clients.
                   As a premier supplier, we offer a comprehensive range of high-performance textile chemicals that cater to
@@ -44,7 +44,7 @@ export const Home: React.FC = () => {
                 </p>
                 <div className="hero-badge">
                   <span className="pulse-dot"></span>
-                  27+ Years of Excellence
+                  {isJupiter ? '20+ Years of Excellence' : '27+ Years of Excellence'}
                 </div>
                 <div className="d-flex flex-wrap gap-3">
                   <Link to="/contact" className="premium-btn-primary">
@@ -105,7 +105,7 @@ export const Home: React.FC = () => {
                 </div>
                 <h3>Industry Expertise</h3>
                 <p>
-                  With over 27 years of experience, {companyName} brings a deep understanding of the
+                  {isJupiter ? 'With over 20 years of experience, ' : 'With over 27 years of experience, '}{companyName} brings a deep understanding of the
                   textile chemicals industry. Our extensive knowledge ensures that we provide the most effective
                   solutions tailored to your specific needs.
                 </p>
@@ -230,7 +230,7 @@ export const Home: React.FC = () => {
                   <div className="row text-white gy-3">
                     <div className="col-sm-6 d-flex align-items-center gap-2">
                       <i className="bi bi-patch-check-fill" style={{ color: '#5480ff', fontSize: '18px' }}></i>
-                      <span style={{ fontSize: '15px', fontWeight: 600 }}>27+ Years of Trust</span>
+                      <span style={{ fontSize: '15px', fontWeight: 600 }}>{isJupiter ? '20+' : '27+'} Years of Trust</span>
                     </div>
                     <div className="col-sm-6 d-flex align-items-center gap-2">
                       <i className="bi bi-patch-check-fill" style={{ color: '#5480ff', fontSize: '18px' }}></i>

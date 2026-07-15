@@ -2389,12 +2389,9 @@ img.whatsapp-icon {
 }
 
 .whatsapp-float:hover {
-  width: auto;
-  padding: 10px 20px;
-}
-
-.whatsapp-float:hover span {
-  display: inline;
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #22c35e;
 }
 
 @media screen and (max-width: 768px) {
@@ -2410,13 +2407,4 @@ img.whatsapp-icon {
     height: 25px;
   }
 
-  .whatsapp-float:hover {
-    width: auto;
-    padding: 10px;
-  }
-
-  .whatsapp-float:hover span {
-    display: inline;
-    font-size: 10px;
-  }
 }

@@ -58,19 +58,25 @@ export const BrandProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     
     const registry = brands as Record<string, BrandConfig>;
     
+    console.log('[BrandContext] Hostname detected:', hostname);
+    
     // 1. Exact match in registry
     if (registry[hostname]) {
+      console.log('[BrandContext] Exact match found:', registry[hostname].companyName);
       return registry[hostname];
     }
     
     // 2. Substring matching (handles Hostinger preview domains, temporary domains, different TLDs)
     if (hostname.includes('jupiter')) {
+      console.log('[BrandContext] Substring match found (jupiter):', registry['jupiterorganics.com'].companyName);
       return registry['jupiterorganics.com'];
     }
     if (hostname.includes('sarda')) {
+      console.log('[BrandContext] Substring match found (sarda):', registry['sardachemicalcorporation.com'].companyName);
       return registry['sardachemicalcorporation.com'];
     }
     
+    console.log('[BrandContext] No match found. Falling back to default brand:', defaultBrand.companyName);
     // Return default fallback
     return defaultBrand as BrandConfig;
   };
