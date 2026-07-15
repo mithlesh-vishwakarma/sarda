@@ -1,13 +1,13 @@
 import sardaLogo from '../assets/img/sarda-logo.png';
 import sardaFavicon from '../assets/img/sarda-favicon.png'; // Updated to user's sarda-favicon.png
-import sardaRoundedLogo from '../assets/img/sarda-rounded-logo-removebg-preview.png';
+import sardaRoundedLogo from '../assets/img/sarda-rounded-logo-removebg.png';
 import jupiterLogo from '../assets/img/jupiter-logo.png';
 import jupiterFavicon from '../assets/img/jupiter-favicon.png'; // Updated to user's jupiter-favicon.png
 import jupiterRoundedLogo from '../assets/img/jupiter-rounded-logo-removebg.png';
 
 const sardaConfig = {
   companyName: 'Sarda Chemical Corporation',
-  logo: sardaLogo,
+  logo: sardaRoundedLogo,
   roundedLogo: sardaRoundedLogo,
   favicon: sardaRoundedLogo,
   primaryColor: '#0d42ff',
@@ -33,17 +33,17 @@ const sardaConfig = {
   orbit2Color: '#E85635',
   orbit3Color: '#0E4981',
   web3FormsAccessKey: 'ed67b5ad-afa4-4acb-9e5a-8d017f8265a9',
-  
+
   // Header styles (dark background with green hover color)
   headerBg: 'rgba(14, 29, 52, 0.88)',
   headerNavColor: 'rgba(255, 255, 255, 0.85)',
   headerNavHoverColor: '#4e7536',
   headerBorderColor: 'rgba(255, 255, 255, 0.12)',
-  
+
   // Button styles (specifically green for Sarda)
   btnPrimaryStart: '#4e7536',
   btnPrimaryEnd: '#3b5929',
-  
+
   // Footer accents (green for Sarda)
   footerAccent: '#4e7536',
 
@@ -59,7 +59,7 @@ const sardaConfig = {
 
 const jupiterConfig = {
   companyName: 'Jupiter Organics',
-  logo: jupiterLogo,
+  logo: jupiterRoundedLogo,
   roundedLogo: jupiterRoundedLogo,
   favicon: jupiterRoundedLogo,
   primaryColor: '#de9127',
@@ -85,17 +85,17 @@ const jupiterConfig = {
   orbit2Color: '#ffba5c',
   orbit3Color: '#ffffff',
   web3FormsAccessKey: 'ed67b5ad-afa4-4acb-9e5a-8d017f8265a9',
-  
+
   // Header styles (translucent white for glassy backdrop blur)
   headerBg: 'rgba(255, 255, 255, 0.82)',
   headerNavColor: '#3a2000',
   headerNavHoverColor: '#de9127',
   headerBorderColor: 'rgba(58, 32, 0, 0.1)',
-  
+
   // Button styles (orange for Jupiter)
   btnPrimaryStart: '#de9127',
   btnPrimaryEnd: '#a36100',
-  
+
   // Footer accents (orange for Jupiter)
   footerAccent: '#de9127',
 
@@ -112,7 +112,7 @@ const jupiterConfig = {
 export const brands = {
   'sardachemicalcorporation.com': sardaConfig,
   'jupiterorganics.com': jupiterConfig,
-  
+
   // Localhost testing mappings
   'localhost': sardaConfig,
   'sarda.localhost': sardaConfig,
